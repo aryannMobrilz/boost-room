@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import { ReactNode } from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+  children?: ReactNode;
+  title?: string;
+};
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
   <div>
@@ -27,7 +27,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         <Link href="/users">
           <a>Users List</a>
         </Link>{' '}
-        | <a href="/api/users">Users API</a>
+        | <a href="/src/api/users">Users API</a>
       </nav>
     </header>
     {children}
@@ -36,6 +36,6 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <span>I'm here to stay (Footer)</span>
     </footer>
   </div>
-)
+);
 
-export default Layout
+export default Layout;
