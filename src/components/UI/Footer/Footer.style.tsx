@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Layout, Typography } from 'antd';
 
 export const LayoutFooter = styled(Layout.Footer)`
-  background-color: var(--primary);
+  background-color: var(--black);
 `;
 
 export const Title = styled(Typography.Title)`

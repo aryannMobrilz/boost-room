@@ -1,6 +1,13 @@
 :root {
-  --primary: #111111;
   --secondary: #333;
+
+  --white: #fff;
+  --black: #111111;
+  --light-blue: #1aa2f9;
+
+  --form-blue: #00b1ff;
+  --form-gray: #f0f0f0;
+  --form-dark-gray: #cecece;
 
   --text-primary: #fff;
   --text-secondary: #888;
