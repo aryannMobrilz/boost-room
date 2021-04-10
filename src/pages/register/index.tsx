@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import { RegisterLayout } from 'components/layouts';
 
 const Register: FC = () => {
-  return <RegisterLayout>sdasd</RegisterLayout>;
+  return <Layout>content</Layout>;
 };
 
 export default Register;
