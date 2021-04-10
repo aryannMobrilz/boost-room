@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import Head from 'next/head';
 
+import '@/styles/global.less';
+
 function MyApp({
   Component,
   pageProps
