@@ -11,6 +11,7 @@ module.exports = withLess(
       reactStrictMode: true
     },
     productionBrowserSourceMaps: true,
+    target: 'serverless',
     webpack: (config, options) => {
       if (!options.dev) {
         // eslint-disable-next-line no-param-reassign
