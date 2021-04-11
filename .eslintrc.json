@@ -24,6 +24,7 @@
   "ignorePatterns": ["node_modules/*", ".next/*", ".out/*"],
   "plugins": ["react", "@typescript-eslint", "only-warn", "prettier"],
   "rules": {
+    "import/order": "off",
     "react/react-in-jsx-scope": "off",
     "eqeqeq": "off",
     "prettier/prettier": ["warn", {}, { "usePrettierrc": true }],
