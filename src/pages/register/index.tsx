@@ -1,10 +1,9 @@
 import { FC } from 'react';
 
-import { Container, CoverImage } from './index.style';
-
+import Layout from 'components/layout/Layout';
 import { Auth } from 'components/UI';
 
-import Layout from 'components/layout/Layout';
+import { Container, CoverImage } from './index.style';
 
 const Register: FC = () => {
   return (

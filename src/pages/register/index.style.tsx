@@ -5,7 +5,7 @@ import registerCover from '@/assets/images/register-cover.png';
 
 export const Container = styled(Row)`
   height: 100%;
-  padding: 30px 0;
+  padding: 60px 0;
 `;
 
 export const CoverImage = styled(Col)`
