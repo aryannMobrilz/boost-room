@@ -1,10 +1,11 @@
 import { FC } from 'react';
-import { Form, FormInstance } from 'antd';
+import { Row, Col, Form, FormInstance } from 'antd';
+import styled from '@emotion/styled';
 
 import Layout from '@/components/layout/Layout';
 import { Auth, RegisterForm } from '@/components/Auth';
 
-import { Container, CoverImage } from './index.style';
+import cover from '@/assets/images/register-cover.png';
 
 const Register: FC = () => {
   const [form] = Form.useForm();
@@ -24,5 +25,15 @@ const Register: FC = () => {
     </Layout>
   );
 };
+
+const Container = styled(Row)`
+  height: 100%;
+  padding: 60px 0;
+`;
+
+const CoverImage = styled(Col)`
+  background-image: url('${cover}');
+  background-size: cover;
+`;
 
 export default Register;
