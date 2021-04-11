@@ -12,12 +12,6 @@ export const Link = styled(Typography.Link)`
   text-decoration: underline !important;
 `;
 
-export const RegisterButton = styled(Button)`
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 10px;
-`;
-
 export const LoginButton = styled(Button)`
   display: inline-block;
   width: 100%;
