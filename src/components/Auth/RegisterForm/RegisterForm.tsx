@@ -53,7 +53,7 @@ const RegisterForm: FC = () => {
         <InputPassword />
       </FormItem>
       <FormItem name="send_latest" valuePropName="checked">
-        <InputCheckbox name="send_latest">Send me the latest deals & offers</InputCheckbox>
+        <InputCheckbox>Send me the latest deals & offers</InputCheckbox>
       </FormItem>
     </>
   );
