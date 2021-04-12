@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const express = require('express');
 const next = require('next');
 
@@ -26,7 +25,7 @@ app
       server.use(
         '/api',
         createProxyMiddleware({
-          target: 'https://api/',
+          target: 'https://reqres.in/api/',
           changeOrigin: true
         })
       );
