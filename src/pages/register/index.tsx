@@ -17,8 +17,17 @@ const Register: FC = () => {
   return (
     <Layout>
       <Container justify="center">
-        <CoverImage span={10} />
-        <Auth span={8} layout="vertical" onFinish={onFinish} form={form as FormInstance<unknown>}>
+        <CoverImage xs={0} lg={9} xl={9} />
+        <Auth
+          layout="vertical"
+          xs={22}
+          sm={20}
+          md={16}
+          lg={8}
+          xl={7}
+          xxl={6}
+          onFinish={onFinish}
+          form={form as FormInstance<unknown>}>
           <RegisterForm />
         </Auth>
       </Container>
