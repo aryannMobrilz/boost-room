@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import Layout from '@/components/layout/Layout';
 import { Auth, LoginForm } from '@/components/Auth';
 
-import cover from '@/assets/images/login-cover.png';
+import cover from '@/assets/images/auth-2.png';
 
 const Login: FC = () => {
   const [form] = Form.useForm();
