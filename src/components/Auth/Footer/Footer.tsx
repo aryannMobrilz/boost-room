@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Image from 'next/image';
 
+import Image from 'next/image';
 import { Divider } from 'antd';
 
 import { Link, LoginButton, Rights, Text, SocialButton } from './Footer.style';

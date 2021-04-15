@@ -25,7 +25,7 @@ app
       server.use(
         '/api',
         createProxyMiddleware({
-          target: 'https://reqres.in/api/',
+          target: 'https://jsonplaceholder.typicode.com',
           changeOrigin: true
         })
       );
