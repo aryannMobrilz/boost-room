@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Image from 'next/image';
 
+import Image from 'next/image';
 import { Col, Row } from 'antd';
 
 import { rules, IRules } from './rules';

@@ -7,7 +7,7 @@ import { Auth, RegisterForm } from '@/components/Auth';
 
 import cover from '@/assets/images/auth-1.png';
 
-const Register: FC = () => {
+const RegisterPage: FC = () => {
   const [form] = Form.useForm();
 
   const onFinish = (data: unknown) => {
@@ -45,4 +45,4 @@ const CoverImage = styled(Col)`
   background-size: cover;
 `;
 
-export default Register;
+export default RegisterPage;
