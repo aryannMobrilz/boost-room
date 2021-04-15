@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import Image from 'next/image';
 
+import Image from 'next/image';
 import { Row, Col } from 'antd';
 import { Subtitle, Text, Link, Social, SocialIcon } from './Footer.style';
 

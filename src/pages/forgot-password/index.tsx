@@ -7,7 +7,7 @@ import { Auth, ForgotPasswordForm } from '@/components/Auth';
 
 import cover from '@/assets/images/auth-2.png';
 
-const ForgotPassword: FC = () => {
+const ForgotPasswordPage: FC = () => {
   const [form] = Form.useForm();
 
   const onFinish = (data: unknown) => {
@@ -45,4 +45,4 @@ export const CoverImage = styled(Col)`
   background-size: cover;
 `;
 
-export default ForgotPassword;
+export default ForgotPasswordPage;

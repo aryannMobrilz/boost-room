@@ -7,7 +7,7 @@ import { Auth, LoginForm } from '@/components/Auth';
 
 import cover from '@/assets/images/auth-2.png';
 
-const Login: FC = () => {
+const LoginPage: FC = () => {
   const [form] = Form.useForm();
 
   const onFinish = (data: unknown) => {
@@ -45,4 +45,4 @@ export const CoverImage = styled(Col)`
   background-size: cover;
 `;
 
-export default Login;
+export default LoginPage;

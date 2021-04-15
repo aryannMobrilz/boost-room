@@ -10,6 +10,9 @@ module.exports = withLess(
       modern: true,
       reactStrictMode: true
     },
+    publicRuntimeConfig: {
+      backendApiHost: process.env.BACKEND_API_HOST || 'http://localhost:3000/api'
+    },
     productionBrowserSourceMaps: true,
     target: 'serverless',
     webpack: (config, options) => {
