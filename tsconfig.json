@@ -19,6 +19,6 @@
     "target": "esnext"
   },
   "exclude": ["node_modules", ".next"],
-  "include": ["src", "pages", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "include": ["pages", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "extends": "./tsconfig.paths.json"
 }
