@@ -1,8 +1,6 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
 import Image from 'next/image';
-
-import testAPI from '../../../api/test';
 
 import { rules, IRules } from './rules';
 
@@ -12,12 +10,6 @@ import atSignSVG from '@/public/assets/icons/form/at-sign.svg';
 
 const LoginForm: FC = () => {
   const { email, password }: IRules = rules;
-
-  useEffect(() => {
-    testAPI()
-      .getPosts(1)
-      .then((res) => console.log('Response', res));
-  }, []);
 
   return (
     <>

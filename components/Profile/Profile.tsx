@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Col } from 'antd';
-import { TopNavigation } from '../UI';
+import { TopNavigation } from '@/components/UI';
 import Overview from './Overview/Overview';
 import Info from './Info/Info';
 import { Container } from './Profile.style';

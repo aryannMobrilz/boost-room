@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Layout as AntLayout } from 'antd';
-import { Footer } from '../UI';
+import { Footer } from '@/components/UI';
 
 const Layout: FC = ({ children }) => {
   return (
