@@ -5,8 +5,6 @@ import styled from '@emotion/styled';
 import Layout from '@/components/layout/Layout';
 import { Auth, RegisterForm } from '@/components/Auth';
 
-import cover from '@/public/assets/images/auth-1.png';
-
 const RegisterPage: FC = () => {
   const [form] = Form.useForm();
 
@@ -41,7 +39,7 @@ const Container = styled(Row)`
 `;
 
 const CoverImage = styled(Col)`
-  background-image: url('${cover}');
+  background-image: url('/assets/images/auth-1.png');
   background-size: cover;
 `;
 

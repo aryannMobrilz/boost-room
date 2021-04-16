@@ -4,13 +4,6 @@ import Image from 'next/image';
 import { Row, Col } from 'antd';
 import { Subtitle, Text, Link, Social, SocialIcon } from './Footer.style';
 
-import emailSVG from '@/public/assets/icons/socials/email.svg';
-import skypeSVG from '@/public/assets/icons/socials/skype.svg';
-import discordSVG from '@/public/assets/icons/socials/discord.svg';
-import viberSVG from '@/public/assets/icons/socials/viber.svg';
-import whatsappSVG from '@/public/assets/icons/socials/whatsapp.svg';
-import messengerSVG from '@/public/assets/icons/socials/messenger.svg';
-
 const SecondColumn: FC = () => {
   return (
     <Row gutter={[12, 30]}>
@@ -25,7 +18,7 @@ const SecondColumn: FC = () => {
       <Col span={24}>
         <Social>
           <SocialIcon>
-            <Image src={emailSVG} height={14} width={21} />
+            <Image src="/assets/icons/socials/email.svg" height={14} width={21} />
           </SocialIcon>
           Support / E-mail
         </Social>
@@ -34,7 +27,7 @@ const SecondColumn: FC = () => {
       <Col span={24}>
         <Social>
           <SocialIcon>
-            <Image src={skypeSVG} height={21} width={21} />{' '}
+            <Image src="/assets/icons/socials/skype.svg" height={21} width={21} />{' '}
           </SocialIcon>
           Skype
         </Social>
@@ -44,7 +37,7 @@ const SecondColumn: FC = () => {
       <Col span={24}>
         <Social>
           <SocialIcon>
-            <Image src={discordSVG} height={24} width={21} />
+            <Image src="/assets/icons/socials/discord.svg" height={24} width={21} />
           </SocialIcon>
           Discord
         </Social>
@@ -53,7 +46,7 @@ const SecondColumn: FC = () => {
       <Col span={24}>
         <Social>
           <SocialIcon>
-            <Image src={viberSVG} height={22} width={21} />{' '}
+            <Image src="/assets/icons/socials/viber.svg" height={22} width={21} />{' '}
           </SocialIcon>
           Viber
         </Social>
@@ -62,7 +55,7 @@ const SecondColumn: FC = () => {
       <Col span={24}>
         <Social>
           <SocialIcon>
-            <Image src={whatsappSVG} height={20} width={20} />
+            <Image src="/assets/icons/socials/whatsapp.svg" height={20} width={20} />
           </SocialIcon>
           WhatsApp
         </Social>
@@ -71,7 +64,7 @@ const SecondColumn: FC = () => {
       <Col span={24}>
         <Social>
           <SocialIcon>
-            <Image src={messengerSVG} height={20} width={20} />
+            <Image src="/assets/icons/socials/messenger.svg" height={20} width={20} />
           </SocialIcon>
           Messenger
         </Social>

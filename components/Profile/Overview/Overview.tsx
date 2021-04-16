@@ -12,8 +12,6 @@ import {
   StatContent
 } from './Overview.style';
 
-import defaultAvatar from '@/public/assets/images/auth-1.png';
-
 export interface OverviewProps {
   fullName: string;
   email: string;
@@ -26,7 +24,7 @@ const Overview: FC<OverviewProps> = ({ fullName, email, accountId }) => {
       <Col span={15}>
         <Row>
           <Col>
-            <Cover src={defaultAvatar} height={132} width={137} />
+            <Cover src="/assets/images/auth-1.png" height={132} width={137} />
           </Col>
           <UserInfo>
             <Title level={2}>{fullName}</Title>

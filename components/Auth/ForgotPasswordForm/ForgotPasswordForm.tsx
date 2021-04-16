@@ -6,15 +6,13 @@ import { rules, IRules } from './rules';
 
 import { FormItem, InputText, InputPassword, InputCheckbox } from '../Auth.style';
 
-import atSignSVG from '@/public/assets/icons/form/at-sign.svg';
-
 const ForgotPasswordForm: FC = () => {
   const { email, password, confirmPassword }: IRules = rules;
 
   return (
     <>
       <FormItem name="email" label="Email address" rules={email}>
-        <InputText suffix={<Image src={atSignSVG} height={14} width={14} />} />
+        <InputText suffix={<Image src="/assets/icons/form/at-sign.svg" height={14} width={14} />} />
       </FormItem>
       <FormItem name="password" label="Password" rules={password}>
         <InputPassword />

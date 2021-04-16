@@ -5,8 +5,6 @@ import styled from '@emotion/styled';
 import Layout from '@/components/layout/Layout';
 import { Auth, LoginForm } from '@/components/Auth';
 
-import cover from '@/public/assets/images/auth-2.png';
-
 const LoginPage: FC = () => {
   const [form] = Form.useForm();
 
@@ -41,7 +39,7 @@ export const Container = styled(Row)`
 `;
 
 export const CoverImage = styled(Col)`
-  background-image: url('${cover}');
+  background-image: url('/assets/images/auth-2.png');
   background-size: cover;
 `;
 
