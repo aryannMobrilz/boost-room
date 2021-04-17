@@ -22,20 +22,20 @@ const Footer: FC = ({ children }) => {
       <SocialButton icon={<Image src="/assets/icons/socials/google.svg" width={20} height={20} />}>
         Continue with Google
       </SocialButton>
-      <FacebookLogin
-        appId="552106132428731"
-        autoLoad={false}
-        fields="name,email,picture"
-        onClick={() => console.log('clicked')}
-        callback={(res) => console.log('res', res)}
-        render={(props) => (
-          <SocialButton
-            icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />}
-            onClick={props.onClick}>
-            Continue with Facebook
-          </SocialButton>
-        )}
-      />
+      {/* <FacebookLogin */}
+      {/*  appId="291105585873600z" */}
+      {/*  autoLoad={false} */}
+      {/*  fields="name,email,picture" */}
+      {/*  onClick={() => console.log('clicked')} */}
+      {/*  callback={(res) => console.log('res', res)} */}
+      {/*  render={(props) => ( */}
+      {/*    <SocialButton */}
+      {/*      icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />} */}
+      {/*      onClick={props.onClick}> */}
+      {/*      Continue with Facebook */}
+      {/*    </SocialButton> */}
+      {/*  )} */}
+      {/* /> */}
       <Rights>&copy; 2020 Boostroom. All rights reserved.</Rights>
     </>
   );
