@@ -1,28 +1,32 @@
-import { FC } from 'react';
+import { useState, FC } from 'react';
 
 import { Col } from 'antd';
 import { TopNavigation } from '@/components/UI';
-import Overview from './Overview/Overview';
-import Info from './Info/Info';
+import { ManageProfile, Transactions } from './Tabs';
 import { Container } from './Profile.style';
 
 import { buyerProfileMenu } from './schemas';
 
 const Profile: FC = () => {
+  const [currentTab, setCurrentTab] = useState<string>('transactions');
+
+  const tab = (key: string) => {
+    switch (key) {
+      case 'profile':
+        return <ManageProfile />;
+      case 'transactions':
+        return <Transactions />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <Container justify="center" gutter={[0, 30]}>
       <Col span={15}>
-        <TopNavigation
-          items={buyerProfileMenu}
-          onChange={(current) => console.log('current', current)}
-        />
+        <TopNavigation items={buyerProfileMenu} current={currentTab} onChange={setCurrentTab} />
       </Col>
-      <Col span={15}>
-        <Overview fullName="John Smith" email="john.smith@gmail.com" accountId="#899889" />
-      </Col>
-      <Col span={15}>
-        <Info />
-      </Col>
+      {tab(currentTab)}
     </Container>
   );
 };

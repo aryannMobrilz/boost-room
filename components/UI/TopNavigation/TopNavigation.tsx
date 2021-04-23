@@ -1,18 +1,19 @@
-import { useState, FC, ReactText, useMemo } from 'react';
+import { FC, SetStateAction, Dispatch } from 'react';
+
 import { Menu } from 'antd';
 
 export interface TopNavigationProps {
   items: Record<string, string>[];
-  onChange: (current: ReactText) => void;
+  current: string;
+  onChange: Dispatch<SetStateAction<string>>;
 }
 
-const TopNavigation: FC<TopNavigationProps> = ({ items, onChange }) => {
-  const [current, setCurrent] = useState<ReactText>('mail');
-
-  useMemo(() => onChange(current), [current, onChange]);
-
+const TopNavigation: FC<TopNavigationProps> = ({ items, current, onChange }) => {
   return (
-    <Menu onClick={(e) => setCurrent(e.key)} selectedKeys={[current as string]} mode="horizontal">
+    <Menu
+      onClick={(e) => onChange(e.key as string)}
+      selectedKeys={[current as string]}
+      mode="horizontal">
       {items.map(({ key, label }) => (
         <Menu.Item key={key}>{label}</Menu.Item>
       ))}

@@ -11,9 +11,12 @@
 
   --text-primary: #fff;
   --text-secondary: #888;
+  --text-tertiary: #001334;
   --link-primary: #1aa2f9;
 
   --sky-blue: #00b1ff;
   --light-green: #22c58b;
   --red: #ec3844;
+
+  --table-background: #fafbfc;
 }

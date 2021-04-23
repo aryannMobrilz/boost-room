@@ -4,7 +4,7 @@ import Image from 'next/image';
 // To Do
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import FacebookLogin from 'react-facebook-login';
 import { Divider } from 'antd';
 
 import { Link, LoginButton, Rights, Text, SocialButton } from './Footer.style';
@@ -22,23 +22,15 @@ const Footer: FC = ({ children }) => {
       <SocialButton icon={<Image src="/assets/icons/socials/google.svg" width={20} height={20} />}>
         Continue with Google
       </SocialButton>
-      {/* <FacebookLogin */}
-      {/*  appId="291105585873600z" */}
-      {/*  autoLoad={false} */}
-      {/*  fields="name,email,picture" */}
-      {/*  onClick={() => console.log('clicked')} */}
-      {/*  callback={(res) => console.log('res', res)} */}
-      {/*  render={(props) => ( */}
-      {/*    <SocialButton */}
-      {/*      icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />} */}
-      {/*      onClick={props.onClick}> */}
-      {/*      Continue with Facebook */}
-      {/*    </SocialButton> */}
-      {/*  )} */}
-      {/* /> */}
+      <FacebookLogin
+        appId="1088597931155576"
+        autoLoad
+        fields="name,email,picture"
+        onClick={() => null}
+        callback={(res) => console.log('res', res)}
+      />
       <Rights>&copy; 2020 Boostroom. All rights reserved.</Rights>
     </>
   );
 };
-
 export default Footer;
