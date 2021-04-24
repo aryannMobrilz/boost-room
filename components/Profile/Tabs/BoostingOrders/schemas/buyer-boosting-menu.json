@@ -1,0 +1,6 @@
+[
+  { "key": "new-orders", "label": "New Orders" },
+  { "key": "accepted-orders", "label": "Accepted Orders" },
+  { "key": "request-lobby", "label": "Request Lobby" },
+  { "key": "boosting-settings", "label": "Boosting Settings" }
+]

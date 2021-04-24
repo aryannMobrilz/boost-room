@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Row, Col, Divider, Typography, Form } from 'antd';
+import { Col, Divider, Typography, Form } from 'antd';
 import PersonalInfoForm from './PersonalInfoForm/PersonalInfoForm';
 import ContactInfoForm from './ContactInfoForm/ContactInfoForm';
 import { Container } from './Info.style';
@@ -8,9 +8,9 @@ import { Container } from './Info.style';
 const Info: FC = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (data: unknown) => {
-    console.log('data', data);
-  };
+  // const onFinish = (data: unknown) => {
+  //   console.log('data', data);
+  // };
 
   return (
     <Container>
