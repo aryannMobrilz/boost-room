@@ -1,10 +1,14 @@
 import styled from '@emotion/styled';
 import { Table as AntTable, Button as AntButton, Typography } from 'antd';
 
-export const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
+type InfoProps = {
+  color?: string;
+};
+
+type ButtonProps = {
+  margin?: string;
+  color?: string;
+};
 
 export const Table = styled(AntTable)`
   th {
@@ -58,48 +62,26 @@ export const Table = styled(AntTable)`
   }
 `;
 
-export const Date = styled(Typography.Text)`
+export const OrderKey = styled(Typography.Text)`
   display: block;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--text-tertiary);
-`;
-
-export const Time = styled(Typography.Text)`
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-quaternary);
-`;
-
-export const Order = styled.span`
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--text-secondary);
-`;
-
-export const OrderNum = styled.span`
-  color: var(--text-tertiary);
-`;
-
-export const ViewOrder = styled(Typography.Link)`
-  color: var(--text-tertiary) !important;
-  text-decoration: underline !important;
-`;
-
-export const RefundInfo = styled.span`
-  font-size: 12px;
-  padding-top: 10px;
   font-weight: 600;
   color: var(--text-secondary);
 `;
 
-export const Button = styled(AntButton)`
-  font-size: 12px;
+export const Info = styled(Typography.Text)`
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ color = 'var(--text-secondary)' }: InfoProps) => `var(--${color})`};
 `;
 
-export const Amount = styled.span`
-  font-size: 12px;
-  font-weight: bold;
-  color: var(--light-green);
+export const Button = styled(AntButton)`
+  display: block;
+  min-width: 130px;
+  margin: ${({ margin = '15px 0 20px 0' }: ButtonProps) => margin};
+  color: ${({ color }: ButtonProps) => (color ? 'var(--white)' : 'var(--text-tertiary)')};
+  font-weight: 600;
+  border: solid 1px var(--border-primary);
+  background-color: ${({ color = 'var(--background-primary)' }: ButtonProps) =>
+    `var(--${color})`}; ;
 `;

@@ -1,6 +1,6 @@
 [
   { "key": "profile", "label": "Manage profile" },
-  { "key": "purchased", "label": "Purchased orders" },
-  { "key": "boosting", "label": "Boosting orders" },
+  { "key": "purchased-orders", "label": "Purchased orders" },
+  { "key": "boosting-orders", "label": "Boosting orders" },
   { "key": "transactions", "label": "Transactions" }
 ]

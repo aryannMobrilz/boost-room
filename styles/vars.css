@@ -17,6 +17,13 @@
   --sky-blue: #00b1ff;
   --light-green: #22c58b;
   --red: #ec3844;
+  --orange: #ffab5a;
+
+  --border-primary: #e0e5ec;
+
+  --background-primary: #f8f8f8;
+  --background-secondary: #f1f1f6;
+  --background-tertiary: #525257;
 
   --table-background: #fafbfc;
 }

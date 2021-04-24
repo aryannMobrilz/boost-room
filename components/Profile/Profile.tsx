@@ -2,7 +2,7 @@ import { useState, FC } from 'react';
 
 import { Col } from 'antd';
 import { TopNavigation } from '@/components/UI';
-import { ManageProfile, Transactions } from './Tabs';
+import { ManageProfile, PurchasedOrders, BoostingOrders, Transactions } from './Tabs';
 import { Container } from './Profile.style';
 
 import { buyerProfileMenu } from './schemas';
@@ -14,6 +14,10 @@ const Profile: FC = () => {
     switch (key) {
       case 'profile':
         return <ManageProfile />;
+      case 'purchased-orders':
+        return <PurchasedOrders />;
+      case 'boosting-orders':
+        return <BoostingOrders />;
       case 'transactions':
         return <Transactions />;
       default:
