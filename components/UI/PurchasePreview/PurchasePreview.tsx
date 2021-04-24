@@ -5,13 +5,13 @@ import { Container, Detail, Name, Value, NewLine } from './PurchasePreview.style
 
 export interface PurchasePreviewProps {
   details: Record<string, any>[];
-  onChange: (settings: Record<string, any>) => void;
+  // onChange: (settings: Record<string, any>) => void;
 }
 
-const PurchasePreview: FC<PurchasePreviewProps> = ({ details, onChange }) => {
+const PurchasePreview: FC<PurchasePreviewProps> = ({ details }) => {
   return (
     <Container>
-      {details.map((detail: Record<string, any>) => (
+      {details.map(() => (
         <>
           <Typography.Title level={5}>1. Product</Typography.Title>
           <Detail>

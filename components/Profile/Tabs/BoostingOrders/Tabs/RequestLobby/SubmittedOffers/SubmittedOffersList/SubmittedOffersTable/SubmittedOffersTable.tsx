@@ -1,11 +1,11 @@
-import { useState, FC } from 'react';
+import { FC } from 'react';
 import moment from 'moment';
 
 import { Row, Col } from 'antd';
 import { PurchasePreview } from '@/components/UI';
 import { Table, OrderKey, Info, Button } from './SubmittedOffersTable.style';
 
-const columns = ({ purchasePreview }: Record<string, any>) => [
+const columns = () => [
   {
     title: 'Order info',
     dataIndex: 'order',
@@ -69,7 +69,7 @@ const columns = ({ purchasePreview }: Record<string, any>) => [
               { title: 'Billing Information' },
               { title: 'Payment method' }
             ]}
-            onChange={purchasePreview.onChange}
+            // onChange={purchasePreview.onChange}
           />
         </>
       );
@@ -165,18 +165,18 @@ const data = [
 ];
 
 const SubmittedOffersTable: FC = () => {
-  const [isPurchasePreview, setIsPurchasePreview] = useState<boolean>(false);
-
-  const settings = {
-    purchasePreview: {
-      isPurchasePreview,
-      setIsPurchasePreview
-    }
-  };
+  // const [isPurchasePreview, setIsPurchasePreview] = useState<boolean>(false);
+  //
+  // const settings = {
+  //   purchasePreview: {
+  //     isPurchasePreview,
+  //     setIsPurchasePreview
+  //   }
+  // };
 
   return (
     <Table
-      columns={columns(settings)}
+      columns={columns()}
       dataSource={data}
       pagination={{
         total: 200
