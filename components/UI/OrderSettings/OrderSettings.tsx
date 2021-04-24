@@ -4,10 +4,10 @@ import { Input, Typography } from 'antd';
 import { Container, Subtitle, ComplaintButton, CancelButton } from './OrderSettings.style';
 
 export interface OrderSettingsProps {
-  onChange: (settings: Record<string, any>) => void;
+  // onChange: (settings: Record<string, any>) => void;
 }
 
-const OrderSettings: FC<OrderSettingsProps> = ({ onChange }) => {
+const OrderSettings: FC<OrderSettingsProps> = ({}) => {
   return (
     <Container>
       <Typography.Title level={5}>Complaint message</Typography.Title>

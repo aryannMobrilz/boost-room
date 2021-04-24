@@ -1,4 +1,4 @@
-import { useState, FC } from 'react';
+import { FC } from 'react';
 import moment from 'moment';
 
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import {
 } from '@/components/UI';
 import { Table, OrderKey, Info, Button, OrderInfo } from './RegularOrdersTable.style';
 
-const columns = ({ orderSettings, purchasePreview }: Record<string, any>) => [
+const columns = () => [
   {
     title: 'Order info',
     dataIndex: 'order',
@@ -50,7 +50,7 @@ const columns = ({ orderSettings, purchasePreview }: Record<string, any>) => [
           <br />
           <Button>Order Settings</Button>
           <Button>Purchase Preview</Button>
-          <OrderSettings onChange={orderSettings.onChange} />
+          <OrderSettings />
           <PurchasePreview
             details={[
               {
@@ -72,7 +72,7 @@ const columns = ({ orderSettings, purchasePreview }: Record<string, any>) => [
               { title: 'Billing Information' },
               { title: 'Payment method' }
             ]}
-            onChange={purchasePreview.onChange}
+            // onChange={purchasePreview.onChange}
           />
           <StatusBar>
             Order Status:
@@ -197,23 +197,23 @@ const data = [
 ];
 
 const RegularOrdersTable: FC = () => {
-  const [isOrderSettings, setIsOrderSettings] = useState<boolean>(false);
-  const [isPurchasePreview, setIsPurchasePreview] = useState<boolean>(false);
-
-  const settings = {
-    orderSettings: {
-      isOrderSettings,
-      setIsOrderSettings
-    },
-    purchasePreview: {
-      isPurchasePreview,
-      setIsPurchasePreview
-    }
-  };
+  // const [isOrderSettings, setIsOrderSettings] = useState<boolean>(false);
+  // const [isPurchasePreview, setIsPurchasePreview] = useState<boolean>(false);
+  //
+  // const settings = {
+  //   orderSettings: {
+  //     isOrderSettings,
+  //     setIsOrderSettings
+  //   },
+  //   purchasePreview: {
+  //     isPurchasePreview,
+  //     setIsPurchasePreview
+  //   }
+  // };
 
   return (
     <Table
-      columns={columns(settings)}
+      columns={columns()}
       dataSource={data}
       pagination={{
         total: 200
