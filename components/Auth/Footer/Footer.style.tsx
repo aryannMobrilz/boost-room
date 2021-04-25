@@ -31,7 +31,7 @@ export const NewLine = styled(Divider)`
 export const SocialButton = styled(Button)`
   display: flex;
   align-items: center;
-  padding-left: 80px;
+  padding-left: 30%;
   padding-top: 13px;
   padding-bottom: 13px;
   width: 100%;

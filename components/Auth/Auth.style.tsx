@@ -79,7 +79,7 @@ export const InputText = styled(Input)`
   padding: 0 3px 3px;
 `;
 
-export const RememberMe = styled(Form.Item)`
+export const AdditionalInfo = styled(Form.Item)`
   margin-bottom: 40px;
 
   .ant-checkbox-wrapper {

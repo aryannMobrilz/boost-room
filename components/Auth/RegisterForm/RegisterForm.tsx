@@ -5,7 +5,7 @@ import { Col, Row } from 'antd';
 
 import { rules, IRules } from './rules';
 
-import { FormItem, InputText, InputPassword, InputCheckbox } from '../Auth.style';
+import { FormItem, InputText, InputPassword, InputCheckbox, AdditionalInfo } from '../Auth.style';
 
 const RegisterForm: FC = () => {
   const { firstName, lastName, username, email, password, confirmPassword }: IRules = rules;
@@ -38,6 +38,7 @@ const RegisterForm: FC = () => {
         <InputPassword />
       </FormItem>
       <FormItem
+        lastChild
         name="confirmPassword"
         label="Confirm Password"
         rules={[
@@ -53,9 +54,9 @@ const RegisterForm: FC = () => {
         ]}>
         <InputPassword />
       </FormItem>
-      <FormItem name="send_latest" valuePropName="checked">
+      <AdditionalInfo name="send_latest" valuePropName="checked">
         <InputCheckbox>Send me the latest deals & offers</InputCheckbox>
-      </FormItem>
+      </AdditionalInfo>
     </>
   );
 };

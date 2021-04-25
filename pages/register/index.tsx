@@ -15,7 +15,7 @@ const RegisterPage: FC = () => {
   return (
     <Layout>
       <Container justify="center">
-        <CoverImage xs={0} lg={9} xl={9} />
+        <CoverImage xs={0} lg={9} xl={13} />
         <Auth
           layout="vertical"
           type="register"
@@ -23,8 +23,7 @@ const RegisterPage: FC = () => {
           sm={20}
           md={16}
           lg={8}
-          xl={7}
-          xxl={6}
+          xl={11}
           onFinish={onFinish}
           form={form as FormInstance<unknown>}>
           <RegisterForm />
@@ -36,6 +35,8 @@ const RegisterPage: FC = () => {
 
 const Container = styled(Row)`
   height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 60px 0;
 `;
 

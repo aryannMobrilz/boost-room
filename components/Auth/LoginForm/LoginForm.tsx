@@ -10,7 +10,7 @@ import {
   InputText,
   InputPassword,
   InputCheckbox,
-  RememberMe,
+  AdditionalInfo,
   ForgotPassword
 } from '../Auth.style';
 
@@ -25,12 +25,12 @@ const LoginForm: FC = () => {
       <FormItem lastChild name="password" label="Password" rules={password}>
         <InputPassword />
       </FormItem>
-      <RememberMe name="remember" valuePropName="checked" initialValue="true">
+      <AdditionalInfo name="remember" valuePropName="checked" initialValue="true">
         <InputCheckbox>Remember me</InputCheckbox>
         <Link href="/forgot-password">
           <ForgotPassword>Forgot your password?</ForgotPassword>
         </Link>
-      </RememberMe>
+      </AdditionalInfo>
     </>
   );
 };

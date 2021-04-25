@@ -15,7 +15,7 @@ const LoginPage: FC = () => {
   return (
     <Layout>
       <Container justify="center">
-        <CoverImage xs={0} lg={9} xl={15} />
+        <CoverImage xs={0} lg={9} xl={14} />
         <Auth
           layout="vertical"
           type="login"
@@ -23,7 +23,7 @@ const LoginPage: FC = () => {
           sm={20}
           md={16}
           lg={8}
-          xl={9}
+          xl={10}
           onFinish={onFinish}
           form={form as FormInstance<unknown>}>
           <LoginForm />
