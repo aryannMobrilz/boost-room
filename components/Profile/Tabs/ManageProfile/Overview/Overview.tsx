@@ -1,10 +1,13 @@
 import { FC } from 'react';
 
-import { Col, Row, Button } from 'antd';
+import { Col, Row } from 'antd';
+import { MoreMenu } from '@/components/UI';
 import {
   Container,
+  CoverContainer,
   Cover,
   UserInfo,
+  StatsRow,
   Title,
   Subtitle,
   Info,
@@ -16,16 +19,26 @@ export interface OverviewProps {
   fullName: string;
   email: string;
   accountId: string;
+  completed: number;
+  spent: string;
+  canceled: number;
 }
 
-const Overview: FC<OverviewProps> = ({ fullName, email, accountId }) => {
+const Overview: FC<OverviewProps> = ({
+  fullName,
+  email,
+  accountId,
+  completed,
+  spent,
+  canceled
+}) => {
   return (
     <Container>
-      <Col span={15}>
+      <Col span={12}>
         <Row>
-          <Col>
+          <CoverContainer>
             <Cover src="/assets/images/auth-1.png" height={132} width={137} />
-          </Col>
+          </CoverContainer>
           <UserInfo>
             <Title level={2}>{fullName}</Title>
             <Subtitle level={5}>
@@ -34,26 +47,31 @@ const Overview: FC<OverviewProps> = ({ fullName, email, accountId }) => {
             <Subtitle level={5}>
               Account ID: <Info>{accountId}</Info>
             </Subtitle>
-            <Button>...</Button>
+            <MoreMenu
+              items={[
+                { label: 'Change profile picture', onClick: () => null },
+                { label: 'Delete your account', onClick: () => null }
+              ]}
+            />
           </UserInfo>
         </Row>
       </Col>
-      <Col span={9}>
+      <Col push={1} span={11}>
         <Subtitle level={5}>Buying stats</Subtitle>
-        <Row>
-          <Col flex={1}>
+        <StatsRow>
+          <Col span={6}>
             <StatTitle>Total completed orders</StatTitle>
-            <StatContent>25</StatContent>
+            <StatContent color="sky-blue">{completed}</StatContent>
           </Col>
-          <Col flex={1}>
+          <Col push={3} span={6}>
             <StatTitle>Money spent</StatTitle>
-            <StatContent>$25</StatContent>
+            <StatContent color="light-green">{spent}</StatContent>
           </Col>
-          <Col flex={1}>
+          <Col push={6} span={6}>
             <StatTitle>Total canceled orders</StatTitle>
-            <StatContent>2</StatContent>
+            <StatContent color="red">{canceled}</StatContent>
           </Col>
-        </Row>
+        </StatsRow>
       </Col>
     </Container>
   );

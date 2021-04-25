@@ -26,7 +26,7 @@ const Profile: FC = () => {
 
   return (
     <>
-      <Col span={15}>
+      <Col span={24}>
         <TopNavigation items={buyerProfileMenu} current={currentTab} onChange={setCurrentTab} />
       </Col>
       {tab(currentTab)}
