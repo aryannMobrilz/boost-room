@@ -1,3 +1,4 @@
+export { default as CoverImage } from './CoverImage/CoverImage';
 export { default as Footer } from './Footer/Footer';
 export { default as OrderSettings } from './OrderSettings/OrderSettings';
 export { default as OrderStatus } from './OrderStatus/OrderStatus';

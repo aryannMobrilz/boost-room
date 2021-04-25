@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Row, Col, Form, FormInstance } from 'antd';
-import styled from '@emotion/styled';
 
+import { Form, FormInstance } from 'antd';
 import Layout from '@/components/layout/Layout';
+import { AuthContainer } from '@/components/containers';
+import { CoverImage } from '@/components/UI';
 import { Auth, ForgotPasswordForm } from '@/components/Auth';
 
 const ForgotPasswordPage: FC = () => {
@@ -14,8 +15,8 @@ const ForgotPasswordPage: FC = () => {
 
   return (
     <Layout>
-      <Container justify="center">
-        <CoverImage xs={0} lg={9} xl={14} />
+      <AuthContainer justify="center">
+        <CoverImage src="/assets/images/auth-2.png" xs={0} lg={9} xl={14} />
         <Auth
           layout="vertical"
           type="forgot-password"
@@ -28,21 +29,9 @@ const ForgotPasswordPage: FC = () => {
           form={form as FormInstance<unknown>}>
           <ForgotPasswordForm />
         </Auth>
-      </Container>
+      </AuthContainer>
     </Layout>
   );
 };
-
-export const Container = styled(Row)`
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 0;
-`;
-
-export const CoverImage = styled(Col)`
-  background-image: url('/assets/images/auth-2.png');
-  background-size: cover;
-`;
 
 export default ForgotPasswordPage;
