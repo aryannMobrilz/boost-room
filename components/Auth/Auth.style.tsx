@@ -26,7 +26,7 @@ export const FormItem = styled(Form.Item)`
     padding-bottom: 0;
   }
 
-  .ant-form-item-label label {
+  .ant-form-item-label > label {
     font-size: 12px;
     color: var(--form-blue);
   }
@@ -39,9 +39,18 @@ export const FormItem = styled(Form.Item)`
     border-left: 0;
     border-right: 0;
   }
+
+  .ant-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
   .ant-input-affix-wrapper-focused {
     border-color: var(--form-blue);
     box-shadow: 0 2px 2px -2px var(--form-blue);
+  }
+
+  .ant-input-affix-wrapper-focused input::placeholder {
+    color: var(--white);
   }
 `;
 
