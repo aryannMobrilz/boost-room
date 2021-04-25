@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import { Tabs } from '@/components/UI';
-import Active from './Active/Active';
-import SubmittedOffers from './SubmittedOffers/SubmittedOffers';
+import Services from './Services/Services';
+import SubmittedRequests from './SubmittedRequests/SubmittedRequests';
 
 import { buyerRequestLobbyTabs } from './schemas';
 
@@ -10,7 +10,7 @@ const RequestLobby: FC = () => {
   return (
     <Tabs
       tabs={buyerRequestLobbyTabs}
-      content={[<Active key={Math.random()} />, <SubmittedOffers key={Math.random()} />]}
+      content={[<Services key={Math.random()} />, <SubmittedRequests key={Math.random()} />]}
     />
   );
 };
