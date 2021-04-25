@@ -16,6 +16,7 @@ const RegisterForm: FC = () => {
         <Col span={12}>
           <FormItem name="first_name" label="First Name" rules={firstName}>
             <InputText
+              placeholder="First Name"
               suffix={<Image src="/assets/icons/form/user.svg" height={14} width={14} />}
             />
           </FormItem>
@@ -23,19 +24,26 @@ const RegisterForm: FC = () => {
         <Col span={12}>
           <FormItem name="last_name" label="Last Name" rules={lastName}>
             <InputText
+              placeholder="Last Name"
               suffix={<Image src="/assets/icons/form/user.svg" height={14} width={14} />}
             />
           </FormItem>
         </Col>
       </Row>
       <FormItem name="username" label="User Name" rules={username}>
-        <InputText suffix={<Image src="/assets/icons/form/user.svg" height={14} width={14} />} />
+        <InputText
+          placeholder="User Name"
+          suffix={<Image src="/assets/icons/form/user.svg" height={14} width={14} />}
+        />
       </FormItem>
       <FormItem name="email" label="Email address" rules={email}>
-        <InputText suffix={<Image src="/assets/icons/form/at-sign.svg" height={14} width={14} />} />
+        <InputText
+          placeholder="Email address"
+          suffix={<Image src="/assets/icons/form/at-sign.svg" height={14} width={14} />}
+        />
       </FormItem>
       <FormItem name="password" label="Password" rules={password}>
-        <InputPassword />
+        <InputPassword placeholder="Password" />
       </FormItem>
       <FormItem
         lastChild
@@ -52,7 +60,7 @@ const RegisterForm: FC = () => {
             }
           })
         ]}>
-        <InputPassword />
+        <InputPassword placeholder="Confirm Password" />
       </FormItem>
       <AdditionalInfo name="send_latest" valuePropName="checked">
         <InputCheckbox>Send me the latest deals & offers</InputCheckbox>
