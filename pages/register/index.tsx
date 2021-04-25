@@ -18,6 +18,7 @@ const RegisterPage: FC = () => {
         <CoverImage xs={0} lg={9} xl={9} />
         <Auth
           layout="vertical"
+          type="register"
           xs={22}
           sm={20}
           md={16}

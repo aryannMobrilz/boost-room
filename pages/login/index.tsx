@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import { Row, Col, Form, FormInstance } from 'antd';
 import styled from '@emotion/styled';
 
@@ -16,15 +15,15 @@ const LoginPage: FC = () => {
   return (
     <Layout>
       <Container justify="center">
-        <CoverImage xs={0} lg={9} xl={9} />
+        <CoverImage xs={0} lg={9} xl={15} />
         <Auth
           layout="vertical"
+          type="login"
           xs={22}
           sm={20}
           md={16}
           lg={8}
-          xl={7}
-          xxl={6}
+          xl={9}
           onFinish={onFinish}
           form={form as FormInstance<unknown>}>
           <LoginForm />
@@ -36,6 +35,8 @@ const LoginPage: FC = () => {
 
 export const Container = styled(Row)`
   height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 60px 0;
 `;
 

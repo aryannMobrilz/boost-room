@@ -1,10 +1,18 @@
 import { FC } from 'react';
+import Link from 'next/link';
 
 import Image from 'next/image';
 
 import { rules, IRules } from './rules';
 
-import { FormItem, InputText, InputPassword, InputCheckbox } from '../Auth.style';
+import {
+  FormItem,
+  InputText,
+  InputPassword,
+  InputCheckbox,
+  RememberMe,
+  ForgotPassword
+} from '../Auth.style';
 
 const LoginForm: FC = () => {
   const { email, password }: IRules = rules;
@@ -14,12 +22,15 @@ const LoginForm: FC = () => {
       <FormItem name="email" label="Email address" rules={email}>
         <InputText suffix={<Image src="/assets/icons/form/at-sign.svg" height={14} width={14} />} />
       </FormItem>
-      <FormItem name="password" label="Password" rules={password}>
+      <FormItem lastChild name="password" label="Password" rules={password}>
         <InputPassword />
       </FormItem>
-      <FormItem name="remember" valuePropName="checked" initialValue="true">
+      <RememberMe name="remember" valuePropName="checked" initialValue="true">
         <InputCheckbox>Remember me</InputCheckbox>
-      </FormItem>
+        <Link href="/forgot-password">
+          <ForgotPassword>Forgot your password?</ForgotPassword>
+        </Link>
+      </RememberMe>
     </>
   );
 };

@@ -7,6 +7,7 @@ import Footer from './Footer/Footer';
 import { Container, RegisterButton } from './Auth.style';
 
 export interface AuthProps {
+  type: string;
   xs?: number;
   sm?: number;
   md?: number;
@@ -18,15 +19,27 @@ export interface AuthProps {
   form: FormInstance<unknown>;
 }
 
-const Auth: FC<AuthProps> = ({ children, layout, xs, sm, md, lg, xl, xxl, form, onFinish }) => {
+const Auth: FC<AuthProps> = ({
+  children,
+  layout,
+  type,
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  xxl,
+  form,
+  onFinish
+}) => {
   return (
     <Container xs={xs} sm={sm} md={md} lg={lg} xl={xl} xxl={xxl}>
-      <Header />
+      <Header type={type} />
       <Form layout={layout} form={form} onFinish={onFinish}>
         {children}
-        <Footer>
+        <Footer type={type}>
           <RegisterButton type="primary" htmlType="submit">
-            Sign up
+            {type == 'register' ? 'Sign up' : 'Log In'}
           </RegisterButton>
         </Footer>
       </Form>

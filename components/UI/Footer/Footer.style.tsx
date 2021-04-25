@@ -7,7 +7,7 @@ export const LayoutFooter = styled(Layout.Footer)`
 `;
 
 export const Row = styled(AntRow)`
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto !important;
 `;
 
@@ -22,8 +22,13 @@ export const Title = styled(Typography.Title)`
   color: var(--text-primary) !important;
 `;
 
+export const Address = styled(AntCol)`
+  margin-bottom: 40px;
+`;
+
 export const Subtitle = styled(Typography.Title)`
   color: var(--text-primary) !important;
+  margin: 0 !important;
 `;
 
 export const Text = styled(Typography.Text)`

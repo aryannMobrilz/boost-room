@@ -1,15 +1,21 @@
 import { FC } from 'react';
 
-import { Typography } from 'antd';
+import { Title, Subtitle, Text } from './Header.style';
 
-import { Text } from './Header.style';
+export interface HeaderProps {
+  type: string;
+}
 
-const Header: FC = () => {
+const Header: FC<HeaderProps> = ({ type }) => {
   return (
     <>
-      <Typography.Title level={5}>Boostroom</Typography.Title>
-      <Typography.Title level={4}>Create Your Account</Typography.Title>
-      <Text>Enter your information and become member of our ultimate gaming experience</Text>
+      <Subtitle>Boostroom</Subtitle>
+      <Title> {type == 'register' ? 'Create Your Account' : 'Access Your Account'}</Title>
+      <Text>
+        {type == 'register'
+          ? 'Enter your information and become member of our ultimate gaming experience'
+          : 'Get started with professional boosting experience just for you!'}
+      </Text>
     </>
   );
 };
