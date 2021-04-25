@@ -2,23 +2,23 @@ import { useState, FC } from 'react';
 
 import { Col, Typography } from 'antd';
 import { TopNavigation } from '@/components/UI';
-import { RequestLobby } from './Tabs';
+import { NewOrders, AcceptedOrders, RequestLobby, BoostingSettings } from './Tabs';
 
 import { buyerBoostingMenu } from './schemas';
 
 const BoostingOrders: FC = () => {
-  const [currentTab, setCurrentTab] = useState<string>('transactions');
+  const [currentTab, setCurrentTab] = useState<string>('new-orders');
 
   const tab = (key: string) => {
     switch (key) {
       case 'new-orders':
-        return null;
+        return <NewOrders />;
       case 'accepted-orders':
-        return null;
+        return <AcceptedOrders />;
       case 'request-lobby':
         return <RequestLobby />;
       case 'boosting-settings':
-        return null;
+        return <BoostingSettings />;
       default:
         return null;
     }
