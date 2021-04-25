@@ -4,9 +4,10 @@ import { Form, FormInstance } from 'antd';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
-import { Container, RegisterButton } from './Auth.style';
+import { Container, AuthButton } from './Auth.style';
 
 export interface AuthProps {
+  type: string;
   xs?: number;
   sm?: number;
   md?: number;
@@ -18,16 +19,28 @@ export interface AuthProps {
   form: FormInstance<unknown>;
 }
 
-const Auth: FC<AuthProps> = ({ children, layout, xs, sm, md, lg, xl, xxl, form, onFinish }) => {
+const Auth: FC<AuthProps> = ({
+  children,
+  layout,
+  type,
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  xxl,
+  form,
+  onFinish
+}) => {
   return (
     <Container xs={xs} sm={sm} md={md} lg={lg} xl={xl} xxl={xxl}>
-      <Header />
+      <Header type={type} />
       <Form layout={layout} form={form} onFinish={onFinish}>
         {children}
-        <Footer>
-          <RegisterButton type="primary" htmlType="submit">
-            Sign up
-          </RegisterButton>
+        <Footer type={type}>
+          <AuthButton type="primary" htmlType="submit">
+            {type == 'register' ? 'Sign up' : type == 'login' ? 'Log in' : 'Reset password'}
+          </AuthButton>
         </Footer>
       </Form>
     </Container>

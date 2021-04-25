@@ -13,7 +13,7 @@ function MyApp({
   return (
     <>
       <Head>
-        <title>Nesto</title>
+        <title>Gamer Marketplace - Leveling, Boost, Gold, Items, Accounts &ndash; BoostRoom</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />

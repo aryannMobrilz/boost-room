@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import Image from 'next/image';
 import { Row, Col } from 'antd';
-import { Title, Subtitle, Text } from './Footer.style';
+import { Title, Address, Subtitle, Text } from './Footer.style';
 
 const FirstColumn: FC = () => {
   return (
@@ -10,11 +10,12 @@ const FirstColumn: FC = () => {
       <Col span={24}>
         <Title level={2}>BoostRoom</Title>
       </Col>
+      <Address span={24}>
+        <Text>Address: 600 N Broad StreetSuite 5 # 829</Text>
+        <Text>Middletown DE 19709, USA</Text>
+      </Address>
       <Col span={24}>
-        <Text>Address: 600 Broadway</Text>
-      </Col>
-      <Col span={24}>
-        <Subtitle level={4}>We Accept</Subtitle>
+        <Subtitle level={5}>We Accept</Subtitle>
       </Col>
       <Col span={12}>
         <Image src="/assets/icons/payment-methods/visa.svg" height={40} width={80} />

@@ -1,18 +1,27 @@
 import styled from '@emotion/styled';
-import { Button, Checkbox, Col, Form, Input } from 'antd';
+import { Button, Checkbox, Col, Form, Input, Typography } from 'antd';
+
+type FormItemProps = {
+  lastChild?: boolean;
+};
 
 export const Container = styled(Col)`
-  padding: 45px 60px;
+  padding: 45px 65px;
   background-color: var(--white);
 `;
 
-export const RegisterButton = styled(Button)`
+export const AuthButton = styled(Button)`
+  height: auto;
   display: inline-block;
   width: 100%;
   margin-bottom: 10px;
+  font-weight: bold;
+  padding: 13px 0 !important;
 `;
 
 export const FormItem = styled(Form.Item)`
+  margin-bottom: ${({ lastChild = false }: FormItemProps) => (lastChild ? '15px' : '50px')};
+
   .ant-form-item-label {
     padding-bottom: 0;
   }
@@ -68,4 +77,25 @@ export const InputPassword = styled(Input.Password)`
 
 export const InputText = styled(Input)`
   padding: 0 3px 3px;
+`;
+
+export const AdditionalInfo = styled(Form.Item)`
+  margin-bottom: 40px;
+
+  .ant-checkbox-wrapper {
+    margin-bottom: 0;
+  }
+
+  .ant-form-item-control-input-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+export const ForgotPassword = styled(Typography.Link)`
+  display: inline-block;
+  color: var(--sky-blue) !important;
+  font-size: 12px;
+  font-weight: bold;
 `;
