@@ -15,15 +15,15 @@ const LoginPage: FC = () => {
   return (
     <Layout>
       <Container justify="center">
-        <CoverImage xs={0} lg={9} xl={9} />
+        <CoverImage xs={0} lg={9} xl={14} />
         <Auth
           layout="vertical"
+          type="login"
           xs={22}
           sm={20}
           md={16}
           lg={8}
-          xl={7}
-          xxl={6}
+          xl={10}
           onFinish={onFinish}
           form={form as FormInstance<unknown>}>
           <LoginForm />
@@ -35,6 +35,8 @@ const LoginPage: FC = () => {
 
 export const Container = styled(Row)`
   height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 60px 0;
 `;
 

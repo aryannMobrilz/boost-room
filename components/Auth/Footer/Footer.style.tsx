@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Typography } from 'antd';
+import { Button, Divider, Typography } from 'antd';
 
 export const Text = styled(Typography.Text)`
   font-size: 12px;
@@ -17,16 +17,28 @@ export const LoginButton = styled(Button)`
   width: 100%;
   color: var(--light-blue);
   border-color: var(--light-blue);
+  height: auto;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 13px 0 !important;
+`;
+
+export const NewLine = styled(Divider)`
+  margin-top: 20px !important;
+  margin-bottom: 30px !important;
 `;
 
 export const SocialButton = styled(Button)`
   display: flex;
   align-items: center;
-  padding-left: 20%;
+  padding-left: 30%;
+  padding-top: 13px;
+  padding-bottom: 13px;
   width: 100%;
   margin-bottom: 10px;
-  color: var(--light-blue);
-  border-color: var(--light-blue);
+  color: var(--text-tertiary);
+  border: 1px solid var(--outline-primary);
+  height: auto;
 
   div {
     margin-right: 12px;
