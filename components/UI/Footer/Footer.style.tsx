@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Layout, Row as AntRow, Divider, Typography } from 'antd';
+import { Layout, Row as AntRow, Col as AntCol, Divider, Typography } from 'antd';
 
 export const LayoutFooter = styled(Layout.Footer)`
   padding: 100px 12px 0 12px;
@@ -9,6 +9,10 @@ export const LayoutFooter = styled(Layout.Footer)`
 export const Row = styled(AntRow)`
   max-width: 1200px;
   margin: 0 auto !important;
+`;
+
+export const Col = styled(AntCol)`
+  padding-bottom: 80px;
 `;
 
 export const Title = styled(Typography.Title)`
@@ -51,7 +55,7 @@ export const SocialIcon = styled.div`
 export const NewLine = styled(Divider)`
   align-self: center;
   opacity: 0.4;
-  margin-top: 80px;
+  margin-top: 0;
   margin-bottom: 50px;
   background-color: var(--border-secondary);
 `;

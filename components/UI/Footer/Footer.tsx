@@ -1,9 +1,7 @@
+import { FC } from 'react';
 import moment from 'moment';
 
-import { FC } from 'react';
-import { Col } from 'antd';
-
-import { LayoutFooter, Row, NewLine, Copyright, Rights } from './Footer.style';
+import { LayoutFooter, Row, Col, NewLine, Copyright, Rights } from './Footer.style';
 import FirstColumn from './FirstColumn';
 import SecondColumn from './SecondColumn';
 import ThirdColumn from './ThirdColumn';
