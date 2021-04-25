@@ -11,7 +11,8 @@ const FirstColumn: FC = () => {
         <Title level={2}>BoostRoom</Title>
       </Col>
       <Col span={24}>
-        <Text>Address: 600 Broadway</Text>
+        <Text>Address: 600 N Broad StreetSuite 5 # 829</Text>
+        <Text>Middletown DE 19709, USA</Text>
       </Col>
       <Col span={24}>
         <Subtitle level={4}>We Accept</Subtitle>
