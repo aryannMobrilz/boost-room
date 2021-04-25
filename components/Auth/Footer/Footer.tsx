@@ -23,17 +23,23 @@ const Footer: FC<FooterProps> = ({ children, type }) => {
         </Text>
       )}
       {children}
-      <LoginButton>
-        {type == 'register' ? 'Already have an account?' : "Don't have an account?"}
-      </LoginButton>
-      <NewLine plain>OR</NewLine>
-      <SocialButton icon={<Image src="/assets/icons/socials/google.svg" width={20} height={20} />}>
-        Continue with Google
-      </SocialButton>
-      <SocialButton
-        icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />}>
-        Continue with Facebook
-      </SocialButton>
+      {type != 'forgot-password' && (
+        <>
+          <LoginButton>
+            {type == 'register' ? 'Already have an account?' : "Don't have an account?"}
+          </LoginButton>
+
+          <NewLine plain>OR</NewLine>
+          <SocialButton
+            icon={<Image src="/assets/icons/socials/google.svg" width={20} height={20} />}>
+            Continue with Google
+          </SocialButton>
+          <SocialButton
+            icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />}>
+            Continue with Facebook
+          </SocialButton>
+        </>
+      )}
       {/* <FacebookLogin */}
       {/*  appId="1088597931155576" */}
       {/*  autoLoad */}

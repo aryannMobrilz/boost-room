@@ -10,7 +10,7 @@ export const Container = styled(Col)`
   background-color: var(--white);
 `;
 
-export const RegisterButton = styled(Button)`
+export const AuthButton = styled(Button)`
   height: auto;
   display: inline-block;
   width: 100%;

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import { rules, IRules } from './rules';
 
-import { FormItem, InputText, InputPassword, InputCheckbox } from '../Auth.style';
+import { FormItem, InputText, InputPassword } from '../Auth.style';
 
 const ForgotPasswordForm: FC = () => {
   const { email, password, confirmPassword }: IRules = rules;
@@ -32,9 +32,6 @@ const ForgotPasswordForm: FC = () => {
           })
         ]}>
         <InputPassword />
-      </FormItem>
-      <FormItem name="remember" valuePropName="checked" initialValue="true">
-        <InputCheckbox>Remember me</InputCheckbox>
       </FormItem>
     </>
   );
