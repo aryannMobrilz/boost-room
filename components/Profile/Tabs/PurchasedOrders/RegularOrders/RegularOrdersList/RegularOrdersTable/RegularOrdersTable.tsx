@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { useState, FC } from 'react';
 import moment from 'moment';
 
 import Image from 'next/image';
@@ -9,12 +9,21 @@ import {
   OrderSettings,
   PurchasePreview
 } from '@/components/UI';
-import { Table, OrderKey, Info, Button, OrderInfo } from './RegularOrdersTable.style';
+import {
+  Table,
+  OrderKey,
+  Info,
+  OptionButton,
+  CloseButton,
+  Button,
+  OrderInfo
+} from './RegularOrdersTable.style';
 
-const columns = () => [
+const columns = ({ orderSettings, purchasePreview }: Record<string, any>) => [
   {
     title: 'Order info',
     dataIndex: 'order',
+    width: '20%',
     render({ id, game, date, seller, booster, price }: Record<string, any>) {
       return (
         <>
@@ -48,31 +57,65 @@ const columns = () => [
         <>
           <Info>{info}</Info>
           <br />
-          <Button>Order Settings</Button>
-          <Button>Purchase Preview</Button>
-          <OrderSettings />
-          <PurchasePreview
-            details={[
-              {
-                title: 'Product',
-                id: '#7213321',
-                game: 'World of Warcraft',
-                service: 'Boosting',
-                product: 'Castel Narhria Heroic',
-                offer: 'Castle Nathria 10/10 Heroic /PersonalLoot / Play Together With Boosters',
-                seller: 'Boostroom'
-              },
-              {
-                title: 'Offer Details',
-                region: 'Europe',
-                difficult: 'Self play',
-                faction: 'Alliance',
-                rid: '9/10 Bosses Boost Run'
-              },
-              { title: 'Billing Information' },
-              { title: 'Payment method' }
-            ]}
-          />
+          <OptionButton
+            type="primary"
+            active={orderSettings.isOrderSettings}
+            onClick={() => {
+              orderSettings.setIsOrderSettings(info.order?.id);
+              purchasePreview.setIsPurchasePreview(false);
+            }}>
+            Order Settings
+          </OptionButton>
+          <OptionButton
+            type="primary"
+            active={purchasePreview.isPurchasePreview}
+            onClick={() => {
+              purchasePreview.setIsPurchasePreview(info.order?.id);
+              orderSettings.setIsOrderSettings(false);
+            }}>
+            Purchase Preview
+          </OptionButton>
+          <CloseButton
+            type="primary"
+            onClick={() => {
+              orderSettings.setIsOrderSettings(false);
+              purchasePreview.setIsPurchasePreview(false);
+            }}>
+            Close
+          </CloseButton>
+          {orderSettings.isOrderSettings == info.order?.id && (
+            <OrderSettings
+              title={['Complaint message', 'Cancel & Refund request']}
+              subtitle={[
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
+                'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+              ]}
+            />
+          )}
+          {purchasePreview.isPurchasePreview == info.order?.id && (
+            <PurchasePreview
+              details={[
+                {
+                  title: 'Product',
+                  id: '#7213321',
+                  game: 'World of Warcraft',
+                  service: 'Boosting',
+                  product: 'Castel Narhria Heroic',
+                  offer: 'Castle Nathria 10/10 Heroic /PersonalLoot / Play Together With Boosters',
+                  seller: 'Boostroom'
+                },
+                {
+                  title: 'Offer Details',
+                  region: 'Europe',
+                  difficult: 'Self play',
+                  faction: 'Alliance',
+                  rid: '9/10 Bosses Boost Run'
+                },
+                { title: 'Billing Information' },
+                { title: 'Payment method' }
+              ]}
+            />
+          )}
           <StatusBar>
             Order Status:
             <OrderStatus status={status} />
@@ -116,7 +159,7 @@ const data = [
   {
     key: '2',
     order: {
-      id: '380492',
+      id: '380498',
       game: 'PUBG',
       date: '2020-12-26T02:58:51',
       seller: 'BOOSTROOM',
@@ -132,7 +175,7 @@ const data = [
   {
     key: '3',
     order: {
-      id: '920492',
+      id: '920497',
       game: 'League of Legends',
       date: '2020-8-26T02:58:51',
       seller: 'BOOSTROOM',
@@ -148,7 +191,7 @@ const data = [
   {
     key: '4',
     order: {
-      id: '920492',
+      id: '920496',
       game: 'League of Legends',
       date: '2020-8-26T02:58:51',
       seller: 'BOOSTROOM',
@@ -164,7 +207,7 @@ const data = [
   {
     key: '5',
     order: {
-      id: '920492',
+      id: '928492',
       game: 'League of Legends',
       date: '2020-8-26T02:58:51',
       seller: 'BOOSTROOM',
@@ -180,7 +223,7 @@ const data = [
   {
     key: '6',
     order: {
-      id: '920492',
+      id: '970492',
       game: 'League of Legends',
       date: '2020-8-26T02:58:51',
       seller: 'BOOSTROOM',
@@ -196,23 +239,23 @@ const data = [
 ];
 
 const RegularOrdersTable: FC = () => {
-  // const [isOrderSettings, setIsOrderSettings] = useState<boolean>(false);
-  // const [isPurchasePreview, setIsPurchasePreview] = useState<boolean>(false);
+  const [isOrderSettings, setIsOrderSettings] = useState<boolean>(false);
+  const [isPurchasePreview, setIsPurchasePreview] = useState<boolean>(false);
 
-  // const settings = {
-  //   orderSettings: {
-  //     isOrderSettings,
-  //     setIsOrderSettings
-  //   },
-  //   purchasePreview: {
-  //     isPurchasePreview,
-  //     setIsPurchasePreview
-  //   }
-  // };
+  const settings = {
+    orderSettings: {
+      isOrderSettings,
+      setIsOrderSettings
+    },
+    purchasePreview: {
+      isPurchasePreview,
+      setIsPurchasePreview
+    }
+  };
 
   return (
     <Table
-      columns={columns()}
+      columns={columns(settings)}
       dataSource={data}
       pagination={{
         total: 200
