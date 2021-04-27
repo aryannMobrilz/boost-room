@@ -7,7 +7,7 @@ import { ManageProfile, PurchasedOrders, BoostingOrders, Transactions } from './
 import { buyerProfileMenu } from './schemas';
 
 const Profile: FC = () => {
-  const [currentTab, setCurrentTab] = useState<string>('transactions');
+  const [currentTab, setCurrentTab] = useState<string>('profile');
 
   const tab = (key: string) => {
     switch (key) {

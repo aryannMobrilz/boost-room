@@ -25,7 +25,7 @@ const LoginForm: FC = () => {
           suffix={<Image src="/assets/icons/form/at-sign.svg" height={14} width={14} />}
         />
       </FormItem>
-      <FormItem lastChild name="password" label="Password" rules={password}>
+      <FormItem last name="password" label="Password" rules={password}>
         <InputPassword placeholder="Password" />
       </FormItem>
       <AdditionalInfo name="remember" valuePropName="checked" initialValue="true">

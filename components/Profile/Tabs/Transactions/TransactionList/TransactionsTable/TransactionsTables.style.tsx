@@ -11,7 +11,7 @@ export const Table = styled(AntTable)`
     background-color: var(--white) !important;
   }
 
-  tr:nth-child(odd) {
+  tr:nth-of-type(odd) {
     background-color: var(--table-background);
   }
 

@@ -26,8 +26,8 @@ export const NewLine = styled(Divider)`
 `;
 
 export const FormTitle = styled(Typography.Title)`
-  margin-top: ${({ margin = 25 }: FormTitleProps) => `${margin}px !important`};
-  margin-bottom: 35px !important;
+  margin-top: ${({ margin = 60 }: FormTitleProps) => `${margin}px !important`};
+  margin-bottom: 3px !important;
   font-size: 22px !important;
   font-weight: 600;
   color: var(--text-tertiary);
@@ -35,8 +35,11 @@ export const FormTitle = styled(Typography.Title)`
 
 export const FormInfo = styled(Typography.Text)`
   display: block;
-  font-size: 16px;
   font-weight: 500;
   color: var(--text-tertiary);
   margin-bottom: 30px;
+`;
+
+export const CurrentEmail = styled(Typography.Text)`
+  font-weight: bold;
 `;

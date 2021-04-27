@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Col } from 'antd';
 import Overview from './Overview/Overview';
 import Info from './Info/Info';
+import Security from './Security/Security';
 
 const ManageProfile: FC = () => {
   return (
@@ -19,6 +20,9 @@ const ManageProfile: FC = () => {
       </Col>
       <Col span={24}>
         <Info />
+      </Col>
+      <Col span={24}>
+        <Security />
       </Col>
     </>
   );

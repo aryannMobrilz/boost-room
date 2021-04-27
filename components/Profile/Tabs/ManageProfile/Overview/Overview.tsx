@@ -34,12 +34,12 @@ const Overview: FC<OverviewProps> = ({
 }) => {
   return (
     <Container>
-      <Col span={12}>
+      <Col xs={{ span: 24 }} lg={{ span: 12 }}>
         <Row>
           <CoverContainer>
             <Cover src="/assets/images/auth-1.png" height={132} width={137} />
           </CoverContainer>
-          <UserInfo>
+          <UserInfo md={{ span: 12, push: 1 }}>
             <Title level={2}>{fullName}</Title>
             <Subtitle level={5}>
               Email Address: <Info>{email}</Info>
@@ -56,18 +56,26 @@ const Overview: FC<OverviewProps> = ({
           </UserInfo>
         </Row>
       </Col>
-      <Col push={1} span={11}>
+      <Col xs={{ span: 24 }} lg={{ span: 11, push: 1 }}>
         <Subtitle level={5}>Buying stats</Subtitle>
         <StatsRow>
-          <Col span={6}>
+          <Col xs={{ span: 24 }} sm={{ span: 6 }} md={{ span: 4 }} lg={{ span: 7 }}>
             <StatTitle>Total completed orders</StatTitle>
             <StatContent color="sky-blue">{completed}</StatContent>
           </Col>
-          <Col push={3} span={6}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 6, push: 2 }}
+            md={{ span: 4, push: 3 }}
+            lg={{ span: 8, push: 2 }}>
             <StatTitle>Money spent</StatTitle>
             <StatContent color="light-green">{spent}</StatContent>
           </Col>
-          <Col push={6} span={6}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 6, push: 5 }}
+            md={{ span: 4, push: 6 }}
+            lg={{ span: 6, push: 3 }}>
             <StatTitle>Total canceled orders</StatTitle>
             <StatContent color="red">{canceled}</StatContent>
           </Col>

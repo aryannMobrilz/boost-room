@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import { Col, Divider, Typography, Form } from 'antd';
+import { Col, Form } from 'antd';
 import PersonalInfoForm from './PersonalInfoForm/PersonalInfoForm';
 import ContactInfoForm from './ContactInfoForm/ContactInfoForm';
-import { Container } from './Info.style';
+import { Container, SectionTitle, NewLine, FormTitle, FormInfo } from './Info.style';
 
 const Info: FC = () => {
   const [form] = Form.useForm();
@@ -15,15 +15,15 @@ const Info: FC = () => {
   return (
     <Container>
       <Col span={24}>
-        <Typography.Title level={4}>Personal information</Typography.Title>
+        <SectionTitle>Personal information</SectionTitle>
       </Col>
-      <Divider />
+      <NewLine />
       <Col span={24}>
         <Form form={form} layout="vertical">
-          <Typography.Title level={5}>Info</Typography.Title>
+          <FormTitle>Info</FormTitle>
           <PersonalInfoForm />
-          <Typography.Title level={5}>Contact Information</Typography.Title>
-          <Typography.Text>Choose your preferred contact method</Typography.Text>
+          <FormTitle margin={50}>Contact Information</FormTitle>
+          <FormInfo>Choose your preferred contact method</FormInfo>
           <ContactInfoForm />
         </Form>
       </Col>
