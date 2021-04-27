@@ -9,14 +9,14 @@ const ChangePasswordForm: FC = () => {
       <Row>
         <Col xs={{ span: 24 }} sm={{ span: 9 }}>
           <FormItem name="password" label="Current Password">
-            <Input />
+            <Input id="current-password" />
           </FormItem>
         </Col>
       </Row>
       <Row>
         <Col xs={{ span: 24 }} sm={{ span: 9 }}>
           <FormItem name="new_password" label="New Password">
-            <Input />
+            <Input id="new-password" />
           </FormItem>
         </Col>
       </Row>
