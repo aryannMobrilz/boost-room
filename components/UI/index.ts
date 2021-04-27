@@ -9,4 +9,5 @@ export { default as SelectSocialContact } from './SelectSocialContact/SelectSoci
 export { default as StatusBar } from './StatusBar/StatusBar';
 export { default as StatusTag } from './StatusTag/StatusTag';
 export { default as Tabs } from './Tabs/Tabs';
+export { default as TextBlock } from './TextBlock/TextBlock';
 export { default as TopNavigation } from './TopNavigation/TopNavigation';
