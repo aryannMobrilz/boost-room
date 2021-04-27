@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { Row, Col, Form, FormInstance } from 'antd';
-import styled from '@emotion/styled';
 
+import { Form, FormInstance } from 'antd';
 import Layout from '@/components/layout/Layout';
+import { AuthContainer } from '@/components/containers';
+import { CoverImage } from '@/components/UI';
 import { Auth, RegisterForm } from '@/components/Auth';
 
 const RegisterPage: FC = () => {
@@ -14,8 +15,8 @@ const RegisterPage: FC = () => {
 
   return (
     <Layout>
-      <Container justify="center">
-        <CoverImage xs={0} lg={9} xl={13} />
+      <AuthContainer justify="center">
+        <CoverImage src="/assets/images/auth-1.png" xs={0} lg={9} xl={13} />
         <Auth
           layout="vertical"
           type="register"
@@ -28,21 +29,9 @@ const RegisterPage: FC = () => {
           form={form as FormInstance<unknown>}>
           <RegisterForm />
         </Auth>
-      </Container>
+      </AuthContainer>
     </Layout>
   );
 };
-
-const Container = styled(Row)`
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 0;
-`;
-
-const CoverImage = styled(Col)`
-  background-image: url('/assets/images/auth-1.png');
-  background-size: cover;
-`;
 
 export default RegisterPage;

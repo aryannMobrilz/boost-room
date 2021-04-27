@@ -1,6 +1,6 @@
 import { FC, SetStateAction, Dispatch } from 'react';
 
-import { Menu } from 'antd';
+import { Menu, Item } from './TopNavigation.style';
 
 export interface TopNavigationProps {
   items: Record<string, string>[];
@@ -15,7 +15,7 @@ const TopNavigation: FC<TopNavigationProps> = ({ items, current, onChange }) => 
       selectedKeys={[current as string]}
       mode="horizontal">
       {items.map(({ key, label }) => (
-        <Menu.Item key={key}>{label}</Menu.Item>
+        <Item key={key}>{label}</Item>
       ))}
     </Menu>
   );

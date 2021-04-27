@@ -1,39 +1,40 @@
 import { FC } from 'react';
 
-import { Row, Col, Form, Input, DatePicker } from 'antd';
+import { Row, Col, Input, DatePicker } from 'antd';
+import { FormItem } from './PersonalInfoFrom.style';
 
 const PersonalInfoForm: FC = () => {
   return (
     <>
       <Row>
-        <Col span={12}>
-          <Form.Item name="first_name" label="First name">
+        <Col xs={{ span: 24 }} sm={{ span: 11 }}>
+          <FormItem name="first_name" label="First name">
             <Input />
-          </Form.Item>
+          </FormItem>
         </Col>
-        <Col span={12}>
-          <Form.Item name="last_name" label="Last name">
+        <Col xs={{ span: 24 }} sm={{ span: 11, push: 2 }}>
+          <FormItem name="last_name" label="Last name">
             <Input />
-          </Form.Item>
-        </Col>
-      </Row>
-      <Row>
-        <Col span={12}>
-          <Form.Item name="country" label="Country">
-            <Input />
-          </Form.Item>
-        </Col>
-        <Col span={12}>
-          <Form.Item name="address" label="Address">
-            <Input />
-          </Form.Item>
+          </FormItem>
         </Col>
       </Row>
       <Row>
-        <Col span={12}>
-          <Form.Item name="date_of_birth" label="Birthday">
+        <Col xs={{ span: 24 }} sm={{ span: 11 }}>
+          <FormItem name="country" label="Country">
+            <Input />
+          </FormItem>
+        </Col>
+        <Col xs={{ span: 24 }} sm={{ span: 11, push: 2 }}>
+          <FormItem name="address" label="Address">
+            <Input />
+          </FormItem>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={{ span: 24 }} sm={{ span: 11 }}>
+          <FormItem name="date_of_birth" label="Birthday">
             <DatePicker format="2015/01/01" />
-          </Form.Item>
+          </FormItem>
         </Col>
       </Row>
     </>
