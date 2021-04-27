@@ -14,7 +14,7 @@ const Profile: FC = () => {
       case 'profile':
         return <ManageProfile />;
       case 'purchased-orders':
-        return <PurchasedOrders />;
+        return <PurchasedOrders orders={4} />;
       case 'boosting-orders':
         return <BoostingOrders />;
       case 'transactions':

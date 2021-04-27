@@ -1,39 +1,39 @@
 import { FC } from 'react';
 
-import { Input, Typography } from 'antd';
-import { Container, Subtitle, ComplaintButton, CancelButton } from './OrderSettings.style';
+import {
+  Container,
+  Title,
+  Subtitle,
+  TextArea,
+  ComplaintButton,
+  CancelButton
+} from './OrderSettings.style';
 
 export interface OrderSettingsProps {
-  // onChange: (settings: Record<string, any>) => void;
+  title: string[];
+  subtitle: string[];
 }
 
-const OrderSettings: FC<OrderSettingsProps> = ({}) => {
+const OrderSettings: FC<OrderSettingsProps> = ({ title, subtitle }) => {
   return (
     <Container>
-      <Typography.Title level={5}>Complaint message</Typography.Title>
-      <Subtitle>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </Subtitle>
-      <Input.TextArea
+      <Title>{title[0]}</Title>
+      <Subtitle>{subtitle[0]}</Subtitle>
+      <TextArea
+        autoSize={{ minRows: 6, maxRows: 12 }}
+        // onChange={onChange}
+      />
+      <ComplaintButton type="primary">Send Complaint</ComplaintButton>
+      <br />
+      <br />
+      <Title>{title[1]}</Title>
+      <Subtitle>{subtitle[1]}</Subtitle>
+      <TextArea
         allowClear
         autoSize={{ minRows: 6, maxRows: 12 }}
         // onChange={onChange}
       />
-      <ComplaintButton>Send Complaint</ComplaintButton>
-      <br />
-      <br />
-      <Typography.Title level={5}>Cancel & Refund request</Typography.Title>
-      <Subtitle>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </Subtitle>
-      <Input.TextArea
-        allowClear
-        autoSize={{ minRows: 6, maxRows: 12 }}
-        // onChange={onChange}
-      />
-      <CancelButton>Cancel / Refund</CancelButton>
+      <CancelButton danger>Cancel / Refund</CancelButton>
     </Container>
   );
 };

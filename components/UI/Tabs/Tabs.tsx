@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react';
 
-import { Tabs as AntTabs } from 'antd';
+import { Tabs as ATabs } from 'antd';
+import { AntTabs } from './Tabs.style';
 
 export interface TabsProps {
   tabs: Record<string, any>[];
@@ -11,9 +12,9 @@ const Tabs: FC<TabsProps> = ({ tabs, content }) => {
   return (
     <AntTabs defaultActiveKey={tabs[0].key}>
       {tabs.map(({ tab, key }, i) => (
-        <AntTabs.TabPane tab={tab} key={key}>
+        <ATabs.TabPane tab={tab} key={key}>
           {content[i]}
-        </AntTabs.TabPane>
+        </ATabs.TabPane>
       ))}
     </AntTabs>
   );

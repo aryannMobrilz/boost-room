@@ -1,19 +1,25 @@
 import { FC } from 'react';
 
-import { Col, Typography } from 'antd';
+import { Col } from 'antd';
 import { Tabs } from '@/components/UI';
 import RegularOrders from './RegularOrders/RegularOrders';
 import CustomOrders from './CustomOrders/CustomOrders';
+import { TabTitle, OrdersCount } from './PurchasedOrders.style';
 
 import { buyerPurchasedOrdersTabs } from './schemas';
 
-const PurchasedOrders: FC = () => {
+export interface PurchasedOrdersProps {
+  orders: number;
+}
+
+const PurchasedOrders: FC<PurchasedOrdersProps> = ({ orders }) => {
   return (
     <>
-      <Col span={15}>
-        <Typography.Title level={2}>Purchased Orders</Typography.Title>
+      <Col span={24}>
+        <TabTitle>Purchased Orders</TabTitle>
+        <OrdersCount>Orders: {orders}</OrdersCount>
       </Col>
-      <Col span={15}>
+      <Col span={24}>
         <Tabs
           tabs={buyerPurchasedOrdersTabs}
           content={[<RegularOrders key={Math.random()} />, <CustomOrders key={Math.random()} />]}
