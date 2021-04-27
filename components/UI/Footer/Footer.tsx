@@ -20,7 +20,7 @@ const Footer: FC = () => {
         <Col xs={{ span: 24 }} sm={{ span: 12 }} xl={{ span: 5, push: 1 }}>
           <ThirdColumn />
         </Col>
-        <Col xs={{ span: 24 }} sm={{ span: 12 }} xl={{ span: 5, push: 1 }}>
+        <Col xs={{ span: 24 }} sm={{ span: 12 }} xl={{ span: 4, push: 1 }}>
           <FourthColumn />
         </Col>
       </Row>

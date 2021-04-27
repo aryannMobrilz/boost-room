@@ -12,7 +12,8 @@ import {
   OrderNum,
   ViewOrder,
   RefundInfo,
-  Button,
+  ConfirmButton,
+  DeclineButton,
   Amount
 } from './TransactionsTables.style';
 
@@ -44,10 +45,12 @@ const columns = [
               <RefundInfo>
                 <Space size={10} wrap>
                   Please confirm your refund is successfully completed
-                  <Button type="primary" size="small">
+                  <ConfirmButton size="small" type="primary">
                     Confirm
-                  </Button>
-                  <Button size="small">Confirm</Button>
+                  </ConfirmButton>
+                  <DeclineButton size="small" danger>
+                    Decline
+                  </DeclineButton>
                 </Space>
               </RefundInfo>
             </Container>
