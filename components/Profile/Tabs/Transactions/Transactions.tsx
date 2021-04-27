@@ -1,22 +1,23 @@
 import { FC } from 'react';
 
-import { Col, Typography, Divider } from 'antd';
+import { Col } from 'antd';
 import MoneySpent from './MoneySpent/MoneySpent';
 import TransactionList from './TransactionList/TransactionList';
+import { TabTitle, NewLine } from './Transactions.style';
 
 const Transactions: FC = () => {
   return (
     <>
-      <Col span={15}>
-        <Typography.Title level={2}>Transactions</Typography.Title>
+      <Col span={24}>
+        <TabTitle>Transactions</TabTitle>
       </Col>
-      <Col span={15}>
+      <Col span={24}>
         <MoneySpent amount={0} />
       </Col>
-      <Col span={15}>
-        <Divider />
+      <Col span={24}>
+        <NewLine />
       </Col>
-      <Col span={15}>
+      <Col span={24}>
         <TransactionList />
       </Col>
     </>
