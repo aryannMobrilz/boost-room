@@ -3,12 +3,11 @@ import { useState, FC } from 'react';
 import { Col } from 'antd';
 import { TopNavigation } from '@/components/UI';
 import { ManageProfile, PurchasedOrders, BoostingOrders, Transactions } from './Tabs';
-import { Container } from './Profile.style';
 
 import { buyerProfileMenu } from './schemas';
 
 const Profile: FC = () => {
-  const [currentTab, setCurrentTab] = useState<string>('transactions');
+  const [currentTab, setCurrentTab] = useState<string>('profile');
 
   const tab = (key: string) => {
     switch (key) {
@@ -26,12 +25,12 @@ const Profile: FC = () => {
   };
 
   return (
-    <Container justify="center" gutter={[0, 30]}>
-      <Col span={15}>
+    <>
+      <Col span={24}>
         <TopNavigation items={buyerProfileMenu} current={currentTab} onChange={setCurrentTab} />
       </Col>
       {tab(currentTab)}
-    </Container>
+    </>
   );
 };
 

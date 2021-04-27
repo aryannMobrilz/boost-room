@@ -1,10 +1,13 @@
 import { FC } from 'react';
 
-import { Col, Row, Button } from 'antd';
+import { Col, Row } from 'antd';
+import { MoreMenu } from '@/components/UI';
 import {
   Container,
+  CoverContainer,
   Cover,
   UserInfo,
+  StatsRow,
   Title,
   Subtitle,
   Info,
@@ -16,17 +19,27 @@ export interface OverviewProps {
   fullName: string;
   email: string;
   accountId: string;
+  completed: number;
+  spent: string;
+  canceled: number;
 }
 
-const Overview: FC<OverviewProps> = ({ fullName, email, accountId }) => {
+const Overview: FC<OverviewProps> = ({
+  fullName,
+  email,
+  accountId,
+  completed,
+  spent,
+  canceled
+}) => {
   return (
     <Container>
-      <Col span={15}>
+      <Col xs={{ span: 24 }} lg={{ span: 12 }}>
         <Row>
-          <Col>
+          <CoverContainer>
             <Cover src="/assets/images/auth-1.png" height={132} width={137} />
-          </Col>
-          <UserInfo>
+          </CoverContainer>
+          <UserInfo md={{ span: 12, push: 1 }}>
             <Title level={2}>{fullName}</Title>
             <Subtitle level={5}>
               Email Address: <Info>{email}</Info>
@@ -34,26 +47,39 @@ const Overview: FC<OverviewProps> = ({ fullName, email, accountId }) => {
             <Subtitle level={5}>
               Account ID: <Info>{accountId}</Info>
             </Subtitle>
-            <Button>...</Button>
+            <MoreMenu
+              items={[
+                { label: 'Change profile picture', onClick: () => null },
+                { label: 'Delete your account', onClick: () => null }
+              ]}
+            />
           </UserInfo>
         </Row>
       </Col>
-      <Col span={9}>
+      <Col xs={{ span: 24 }} lg={{ span: 11, push: 1 }}>
         <Subtitle level={5}>Buying stats</Subtitle>
-        <Row>
-          <Col flex={1}>
+        <StatsRow>
+          <Col xs={{ span: 24 }} sm={{ span: 6 }} md={{ span: 4 }} lg={{ span: 7 }}>
             <StatTitle>Total completed orders</StatTitle>
-            <StatContent>25</StatContent>
+            <StatContent color="sky-blue">{completed}</StatContent>
           </Col>
-          <Col flex={1}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 6, push: 2 }}
+            md={{ span: 4, push: 3 }}
+            lg={{ span: 8, push: 2 }}>
             <StatTitle>Money spent</StatTitle>
-            <StatContent>$25</StatContent>
+            <StatContent color="light-green">{spent}</StatContent>
           </Col>
-          <Col flex={1}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 6, push: 5 }}
+            md={{ span: 4, push: 6 }}
+            lg={{ span: 6, push: 3 }}>
             <StatTitle>Total canceled orders</StatTitle>
-            <StatContent>2</StatContent>
+            <StatContent color="red">{canceled}</StatContent>
           </Col>
-        </Row>
+        </StatsRow>
       </Col>
     </Container>
   );

@@ -1,8 +1,8 @@
 import Link from 'next/link';
-// import Layout from '@/components/Layout';
+// import layout from '@/components/layout';
 
 const IndexPage = () => (
-  // <Layout title="custom title">
+  // <layout title="custom title">
   <div>
     <h1>BoostRoom</h1>
     <p>
