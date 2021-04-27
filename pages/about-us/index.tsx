@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import Layout from '@/components/layout/Layout';
 import { CommonContainer } from '@/components/layout/containers';
-import { Jumbotron, Testimonials } from '@/components/UI';
+import { Jumbotron, Testimonials, PopularGames } from '@/components/UI';
 import AboutUs from '@/components/AboutUs/AboutUs';
 
 const AboutUsPage: FC = () => {
@@ -27,6 +27,30 @@ We are always here to help!"
       />
       <CommonContainer justify="center">
         <Testimonials />
+        <PopularGames
+          games={[
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft',
+            'World of Warcraft'
+          ]}
+        />
       </CommonContainer>
     </Layout>
   );

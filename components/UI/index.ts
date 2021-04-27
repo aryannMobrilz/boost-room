@@ -4,6 +4,7 @@ export { default as Jumbotron } from './Jumbotron/Jumbotron';
 export { default as MoreMenu } from './MoreMenu/MoreMenu';
 export { default as OrderSettings } from './OrderSettings/OrderSettings';
 export { default as OrderStatus } from './OrderStatus/OrderStatus';
+export { default as PopularGames } from './PopularGames/PopularGames';
 export { default as PurchasePreview } from './PurchasePreview/PurchasePreview';
 export { default as Screenshots } from './Screenshots/Screenshots';
 export { default as SelectSocialContact } from './SelectSocialContact/SelectSocialContact';
