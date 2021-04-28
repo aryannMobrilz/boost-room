@@ -8,7 +8,7 @@ export interface JumbotronProps {
   title: string;
   text: string;
   link?: string;
-  src: string;
+  src?: string;
 }
 
 const Jumbotron: FC<JumbotronProps> = ({ centered, title, text, link, src }) => {

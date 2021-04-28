@@ -1,3 +1,4 @@
+export { default as ContactCard } from './ContactCard/ContactCard';
 export { default as CoverImage } from './CoverImage/CoverImage';
 export { default as Footer } from './Footer/Footer';
 export { default as Jumbotron } from './Jumbotron/Jumbotron';
@@ -15,3 +16,4 @@ export { default as Testimonials } from './Testimonials/Testimonials';
 export { default as TextBlock } from './TextBlock/TextBlock';
 export { default as TextCollapse } from './TextCollapse/TextCollapse';
 export { default as TopNavigation } from './TopNavigation/TopNavigation';
+export { default as Warning } from './Warning/Warning';

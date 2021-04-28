@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Row, Button as AntButton, Typography } from 'antd';
 
 type ContainerProps = {
-  src: string;
+  src?: string;
 };
 
 type TitleProps = {
@@ -16,7 +16,7 @@ type TextProps = {
 
 export const Container = styled(Row)`
   padding: 60px 0;
-  background: ${({ src }: ContainerProps) => `url(${src})`};
+  background: ${({ src }: ContainerProps) => (src ? `url(${src})` : 'var(--tertiary)')};
 `;
 
 export const Title = styled(Typography.Title)`
