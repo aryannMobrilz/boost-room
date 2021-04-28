@@ -13,4 +13,5 @@ export { default as StatusTag } from './StatusTag/StatusTag';
 export { default as Tabs } from './Tabs/Tabs';
 export { default as Testimonials } from './Testimonials/Testimonials';
 export { default as TextBlock } from './TextBlock/TextBlock';
+export { default as TextCollapse } from './TextCollapse/TextCollapse';
 export { default as TopNavigation } from './TopNavigation/TopNavigation';
