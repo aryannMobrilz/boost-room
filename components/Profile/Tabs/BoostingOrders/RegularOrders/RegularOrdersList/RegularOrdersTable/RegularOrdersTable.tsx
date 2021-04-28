@@ -50,7 +50,7 @@ const columns = () => [
           <br />
           <Button>Order Settings</Button>
           <Button>Purchase Preview</Button>
-          <OrderSettings />
+          <OrderSettings title={['tt', 's']} subtitle={['tt', 's']} />
           <PurchasePreview
             details={[
               {
