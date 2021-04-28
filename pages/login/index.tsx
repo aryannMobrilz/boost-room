@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Form, FormInstance } from 'antd';
 import Layout from '@/components/layout/Layout';
-import { AuthContainer } from '@/components/containers';
+import { CommonContainer } from '@/components/layout/containers';
 import { CoverImage } from '@/components/UI';
 import { Auth, LoginForm } from '@/components/Auth';
 
@@ -15,7 +15,7 @@ const LoginPage: FC = () => {
 
   return (
     <Layout>
-      <AuthContainer justify="center">
+      <CommonContainer justify="center">
         <CoverImage src="/assets/images/auth-2.png" xs={0} lg={9} xl={14} />
         <Auth
           layout="vertical"
@@ -29,7 +29,7 @@ const LoginPage: FC = () => {
           form={form as FormInstance<unknown>}>
           <LoginForm />
         </Auth>
-      </AuthContainer>
+      </CommonContainer>
     </Layout>
   );
 };

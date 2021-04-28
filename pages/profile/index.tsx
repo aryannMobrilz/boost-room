@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import Layout from '@/components/layout/Layout';
-import { ProfileContainer } from '@/components/containers';
+import { ProfileContainer } from '@/components/layout/containers';
 import { Profile } from '@/components/Profile';
 
 const ProfilePage: FC = () => {
