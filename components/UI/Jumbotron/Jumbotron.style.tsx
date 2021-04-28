@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { Row, Typography } from 'antd';
+import { Row, Button as AntButton, Typography } from 'antd';
 
 type ContainerProps = {
   src: string;
@@ -40,4 +40,17 @@ export const Text = styled(Typography.Paragraph)`
   font-size: 20px;
   font-weight: 500;
   color: var(--white);
+`;
+
+export const Button = styled(AntButton)`
+  display: block;
+  margin: 30px auto 0 auto;
+  text-transform: uppercase;
+  background-color: var(--sky-blue);
+  border: 0;
+  font-size: 18px;
+  height: auto;
+  color: var(--white);
+  padding: 15px 60px;
+  border-radius: 3px;
 `;
