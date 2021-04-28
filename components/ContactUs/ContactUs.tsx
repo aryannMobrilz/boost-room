@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Row, Col } from 'antd';
+import {  Col } from 'antd';
 import { Warning, ContactCard } from '@/components/UI';
 import ContactUsForm from './ContactUsForm/ContactUsForm';
 import { Form, Title, Info, SubmitButton, ContactMethods } from './ContactUs.style';
