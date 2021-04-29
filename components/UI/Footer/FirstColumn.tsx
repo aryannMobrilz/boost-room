@@ -17,25 +17,25 @@ const FirstColumn: FC = () => {
       <Col span={24}>
         <Subtitle level={5}>We Accept</Subtitle>
       </Col>
-      <Col span={12}>
+      <Col span={7}>
         <Image src="/assets/icons/payment-methods/visa.svg" height={40} width={80} />
       </Col>
       <Col span={12}>
         <Image src="/assets/icons/payment-methods/mastercard.svg" height={40} width={80} />
       </Col>
-      <Col span={12}>
+      <Col span={7}>
         <Image src="/assets/icons/payment-methods/paypal.svg" height={40} width={80} />
       </Col>
       <Col span={12}>
         <Image src="/assets/icons/payment-methods/payoneer.svg" height={40} width={80} />
       </Col>
-      <Col span={12}>
+      <Col span={7}>
         <Image src="/assets/icons/payment-methods/skrill.svg" height={40} width={80} />
       </Col>
       <Col span={12}>
         <Image src="/assets/icons/payment-methods/payop.svg" height={40} width={80} />
       </Col>
-      <Col span={12}>
+      <Col span={7}>
         <Image src="/assets/icons/payment-methods/apple-pay.svg" height={40} width={80} />
       </Col>
       <Col span={24}>
