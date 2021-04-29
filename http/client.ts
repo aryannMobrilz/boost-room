@@ -1,15 +1,14 @@
 import { NextPageContext } from 'next';
 import axios, { AxiosInstance } from 'axios';
-import getConfig from 'next/config';
 import cookies from 'next-cookies';
-
-const { publicRuntimeConfig } = getConfig();
 
 let apiClient: AxiosInstance;
 
+export const baseURL = process.env.NEXT_PUBLIC_API_HOST;
+
 export const createApiClient = (): AxiosInstance =>
   axios.create({
-    baseURL: publicRuntimeConfig.backendApiHost,
+    baseURL,
     withCredentials: true,
     xsrfCookieName: 'csrftoken',
     xsrfHeaderName: 'X-CSRFToken'

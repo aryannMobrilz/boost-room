@@ -10,6 +10,9 @@ module.exports = withLess(
       modern: true,
       reactStrictMode: true
     },
+    future: {
+      webpack5: true
+    },
     publicRuntimeConfig: {
       backendApiHost: process.env.BACKEND_API_HOST || 'http://localhost:3000/api'
     },
