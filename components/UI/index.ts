@@ -16,4 +16,5 @@ export { default as Testimonials } from './Testimonials/Testimonials';
 export { default as TextBlock } from './TextBlock/TextBlock';
 export { default as TextCollapse } from './TextCollapse/TextCollapse';
 export { default as TopNavigation } from './TopNavigation/TopNavigation';
+export { default as TrustpilotRating } from './TrustpilotRating/TrustpilotRating';
 export { default as Warning } from './Warning/Warning';
