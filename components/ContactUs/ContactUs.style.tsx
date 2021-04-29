@@ -30,5 +30,5 @@ export const SubmitButton = styled(Button)`
 `;
 
 export const ContactMethods = styled(Row)`
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 `;
