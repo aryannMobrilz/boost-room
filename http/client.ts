@@ -4,7 +4,7 @@ import cookies from 'next-cookies';
 
 let apiClient: AxiosInstance;
 
-export const baseURL = process.env.NEXT_PUBLIC_API_HOST;
+export const baseURL = 'http://localhost:3000/api';
 
 export const createApiClient = (): AxiosInstance =>
   axios.create({
