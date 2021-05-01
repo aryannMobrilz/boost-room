@@ -1,14 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20.539" height="20.252" viewBox="0 0 20.539 20.252">
-    <g>
-        <g>
-            <g>
-                <g>
-                    <path fill="#fbbb00" d="M4.488 145.038l-.7 2.632-2.577.055a10.144 10.144 0 0 1-.075-9.456l2.294.421 1 2.28a6.043 6.043 0 0 0 .057 4.069z" transform="translate(.286) translate(-.286 -132.799)"/>
-                    <path fill="#518ef8" d="M271.355 208.176a10.122 10.122 0 0 1-3.61 9.788l-2.889-.147-.409-2.553a6.036 6.036 0 0 0 2.6-3.082h-5.415v-4.006h9.727z" transform="translate(.286) translate(-251.279 -199.941)"/>
-                    <path fill="#28b446" d="M45.767 315.193a10.129 10.129 0 0 1-15.259-3.1l3.282-2.686a6.022 6.022 0 0 0 8.678 3.083z" transform="translate(.286) translate(-29.302 -297.17)"/>
-                    <path fill="#f14336" d="M44.082 2.331L40.8 5.017a6.022 6.022 0 0 0-8.877 3.153l-3.3-2.7a10.128 10.128 0 0 1 15.459-3.139z" transform="translate(.286) translate(-27.492)"/>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3e4e155ac9e7deb4da8f4aa86f23be0fe84f89085f931615d9e0a8d074e64d4
+size 1045
