@@ -3,18 +3,18 @@ import { useRouter } from 'next/router';
 import type { Url } from 'url';
 
 import { Col } from 'antd';
-import { Container, Title, TextBlock, Text, Button } from './Jumbotron.style';
+import { Container, Title, TextBlock, Subtitle, Button } from './InfoJumbotron.style';
 
 export interface JumbotronProps {
   centered?: boolean;
   title: string;
-  text: string;
+  subtitle: string;
   link?: string;
   url?: string;
   src?: string;
 }
 
-const Jumbotron: FC<JumbotronProps> = ({ centered, title, text, link, url, src }) => {
+const InfoJumbotron: FC<JumbotronProps> = ({ centered, title, subtitle, link, url, src }) => {
   const router = useRouter();
 
   return (
@@ -22,7 +22,7 @@ const Jumbotron: FC<JumbotronProps> = ({ centered, title, text, link, url, src }
       <Col span={24}>
         <TextBlock>
           <Title centered={centered}>{title}</Title>
-          <Text centered={centered}>{text}</Text>
+          <Subtitle centered={centered}>{subtitle}</Subtitle>
           {link && <Button onClick={() => router.push((url as unknown) as Url)}>{link}</Button>}
         </TextBlock>
       </Col>
@@ -30,4 +30,4 @@ const Jumbotron: FC<JumbotronProps> = ({ centered, title, text, link, url, src }
   );
 };
 
-export default Jumbotron;
+export default InfoJumbotron;

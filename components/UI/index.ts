@@ -1,7 +1,9 @@
 export { default as ContactCard } from './ContactCard/ContactCard';
 export { default as CoverImage } from './CoverImage/CoverImage';
 export { default as Footer } from './Footer/Footer';
+export { default as InfoJumbotron } from './InfoJumbotron/InfoJumbotron';
 export { default as Jumbotron } from './Jumbotron/Jumbotron';
+export { default as LandingJumbotron } from './LandingJumbotron/LandingJumbotron';
 export { default as MoreMenu } from './MoreMenu/MoreMenu';
 export { default as OrderSettings } from './OrderSettings/OrderSettings';
 export { default as OrderStatus } from './OrderStatus/OrderStatus';

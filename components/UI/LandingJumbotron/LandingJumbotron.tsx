@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import type { Url } from 'url';
 
 import { Col } from 'antd';
-import { Container, Title, TextBlock, Text, Button } from './Jumbotron.style';
+import { Container, Title, TextBlock, Text, Button } from './LandingJumbotron.style';
 
 export interface JumbotronProps {
   centered?: boolean;
@@ -14,7 +14,7 @@ export interface JumbotronProps {
   src?: string;
 }
 
-const Jumbotron: FC<JumbotronProps> = ({ centered, title, text, link, url, src }) => {
+const LandingJumbotron: FC<JumbotronProps> = ({ centered, title, text, link, url, src }) => {
   const router = useRouter();
 
   return (
@@ -30,4 +30,4 @@ const Jumbotron: FC<JumbotronProps> = ({ centered, title, text, link, url, src }
   );
 };
 
-export default Jumbotron;
+export default LandingJumbotron;
