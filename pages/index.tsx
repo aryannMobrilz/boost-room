@@ -2,7 +2,13 @@ import { FC } from 'react';
 
 import Layout from '@/components/layout/Layout';
 import { CommonContainer } from '@/components/layout/containers';
-import { LandingJumbotron, InfoJumbotron, Testimonials, PopularGames } from '@/components/UI';
+import {
+  LandingJumbotron,
+  InfoJumbotron,
+  PopularServices,
+  Testimonials,
+  PopularGames
+} from '@/components/UI';
 import FAQ from '@/components/FAQ/FAQ';
 
 const IndexPage: FC = () => {
@@ -18,6 +24,90 @@ guarantee exceptional assistance in your gaming needs!"
         src="/assets/images/jumbotron-2.png"
       />
       <CommonContainer justify="center">
+        <PopularServices
+          services={[
+            {
+              title: 'Boosting',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            },
+            {
+              title: 'Coaching',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            },
+            {
+              title: 'Game Coins',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            },
+            {
+              title: 'Items',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            },
+            {
+              title: 'Accounts',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            },
+            {
+              title: 'Top Up',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            },
+            {
+              title: 'Skins',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            },
+            {
+              title: 'Gift Cards',
+              games: [
+                'World of Warcraft',
+                'Path of Exile',
+                'Rocket League',
+                'League of Legends',
+                'Counter Strike'
+              ]
+            }
+          ]}
+        />
         <Testimonials
           title="Why Choose Us?"
           subtitle="Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. At vero eos
@@ -126,7 +216,7 @@ guarantee exceptional assistance in your gaming needs!"
       </CommonContainer>
       <InfoJumbotron
         title="Gamer marketplace"
-        subtitle="Just for you"
+        subtitle={['Just for you']}
         url="/register"
         link="Register here"
         src="/assets/images/jumbotron-3.png"
@@ -135,10 +225,9 @@ guarantee exceptional assistance in your gaming needs!"
         <FAQ />
       </CommonContainer>
       <InfoJumbotron
-        title="Gamer marketplace"
-        subtitle="Just for you"
-        url="/register"
-        link="Register here"
+        left
+        form
+        subtitle={['Subscribe', 'and get discount']}
         src="/assets/images/jumbotron-3.png"
       />
       <CommonContainer justify="center">

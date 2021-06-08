@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
 
-import { Row, Button as AntButton, Typography } from 'antd';
+import { Row, Form, Input as AntInput, Button as AntButton, Typography } from 'antd';
 
 type ContainerProps = {
   src?: string;
 };
 
 type TitleProps = {
-  centered?: boolean;
+  left?: boolean;
 };
 
 type TextProps = {
-  centered?: boolean;
+  left?: boolean;
 };
 
 export const Container = styled(Row)`
@@ -25,9 +25,8 @@ export const Title = styled(Typography.Title)`
   font-size: 48px !important;
   font-weight: 400 !important;
   color: var(--white) !important;
-  margin: ${({ centered }: TextProps) =>
-    centered ? '0 auto 5px auto !important' : '0 0 5px auto !important'};
-  text-align: ${({ centered }: TitleProps) => (centered ? 'center' : 'right')};
+  text-align: ${({ left }: TitleProps) => (left ? 'left' : 'right')};
+  margin: ${({ left }: TitleProps) => (left ? '0 0 0 auto !important' : '0 0 5px auto !important')};
 `;
 
 export const TextBlock = styled.div`
@@ -41,14 +40,33 @@ export const Subtitle = styled(Typography.Title)`
   font-size: 48px !important;
   font-weight: 600 !important;
   color: var(--white) !important;
-  margin: ${({ centered }: TextProps) =>
-    centered ? '0 auto 5px auto !important' : '0 70px 5px auto !important'};
-  text-align: ${({ centered }: TitleProps) => (centered ? 'center' : 'right')};
+  text-align: ${({ left }: TextProps) => (left ? 'left' : 'right')};
+  margin: ${({ left }: TextProps) =>
+    left ? '5px 0 0 auto !important' : '5px 65px 5px auto !important'};
 `;
 
 export const Button = styled(AntButton)`
   display: block;
   margin: 30px 90px 0 auto;
+  text-transform: uppercase;
+  background-color: var(--sky-blue);
+  border: 0;
+  font-size: 18px;
+  height: auto;
+  color: var(--white);
+  padding: 15px 60px;
+  border-radius: 3px;
+`;
+
+export const SubscribeContainer = styled(Row)``;
+
+export const FormItem = styled(Form.Item)``;
+
+export const Input = styled(AntInput)``;
+
+export const SubscribeButton = styled(AntButton)`
+  display: block;
+  margin: 0 90px 0 auto;
   text-transform: uppercase;
   background-color: var(--sky-blue);
   border: 0;
