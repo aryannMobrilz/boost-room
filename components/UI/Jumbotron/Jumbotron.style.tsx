@@ -20,11 +20,12 @@ export const Container = styled(Row)`
 `;
 
 export const Title = styled(Typography.Title)`
+  max-width: 700px;
   text-transform: uppercase;
   font-size: 50px !important;
-  margin-bottom: 5px !important;
   font-weight: bold !important;
   color: var(--white) !important;
+  margin: ${({ centered }: TitleProps) => (centered ? '0 auto 5px auto' : '0 0 5px 0 !important')};
   text-align: ${({ centered }: TitleProps) => (centered ? 'center' : 'left')};
 `;
 

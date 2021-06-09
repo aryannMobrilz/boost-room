@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e209c25000bbf853a6fefbd4004f0bd03d5dd6f789dbac2c6a3fdf4de25689f
-size 782
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+    <defs>
+        <filter id="ckjzktwpba" width="29" height="29" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(9 5.662)">
+        <g filter="url(#ckjzktwpba)" transform="translate(-9 -5.66)">
+            <circle cx="5.5" cy="5.5" r="5.5" fill="#888" opacity="0.3" transform="translate(9 6)"/>
+        </g>
+        <circle cx="3.5" cy="3.5" r="3.5" fill="#888" transform="translate(2 2.338)"/>
+    </g>
+</svg>

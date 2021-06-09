@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Button, Checkbox, Col, Form, Input, Typography } from 'antd';
 
 type FormItemProps = {
-  last?: boolean;
+  last?: number;
 };
 
 export const Container = styled(Col)`
@@ -20,7 +20,7 @@ export const AuthButton = styled(Button)`
 `;
 
 export const FormItem = styled(Form.Item)`
-  margin-bottom: ${({ last = false }: FormItemProps) => (last ? '15px' : '50px')};
+  margin-bottom: ${({ last = 0 }: FormItemProps) => (last ? '15px' : '50px')};
 
   .ant-form-item-label {
     padding-bottom: 0;
