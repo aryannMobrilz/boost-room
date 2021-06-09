@@ -1,8 +1,9 @@
 # example netlify.toml
 [build]
-  command = "next build"
-  functions = "netlify/functions"
-  publish = "out"
+command = "yarn build && yarn export"
+functions = "netlify/functions"
+publish = "out"
+
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
