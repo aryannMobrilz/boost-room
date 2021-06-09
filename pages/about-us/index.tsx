@@ -21,7 +21,7 @@ guarantee exceptional assistance in your gaming needs!"
       <Jumbotron
         centered
         title="Have more questions?"
-        text="If you cannot find answer to your question in our FAQ, you can always contact us.
+        text="If you cannot find answer to your question in our PopularServices, you can always contact us.
 We are always here to help!"
         link="Contact us"
         src="/assets/images/jumbotron-1.png"

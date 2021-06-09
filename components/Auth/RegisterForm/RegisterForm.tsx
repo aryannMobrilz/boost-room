@@ -46,7 +46,7 @@ const RegisterForm: FC = () => {
         <InputPassword placeholder="Password" />
       </FormItem>
       <FormItem
-        last
+        last={1}
         name="confirmPassword"
         label="Confirm Password"
         rules={[

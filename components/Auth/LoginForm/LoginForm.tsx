@@ -25,11 +25,13 @@ const LoginForm: FC = () => {
           suffix={<Image src="/assets/icons/form/at-sign.svg" height={14} width={14} />}
         />
       </FormItem>
-      <FormItem last name="password" label="Password" rules={password}>
+      <FormItem last={1} name="password" label="Password" rules={password}>
         <InputPassword placeholder="Password" />
       </FormItem>
-      <AdditionalInfo name="remember" valuePropName="checked" initialValue="true">
-        <InputCheckbox>Remember me</InputCheckbox>
+      <AdditionalInfo>
+        <InputCheckbox name="remember" defaultChecked>
+          Remember me
+        </InputCheckbox>
         <Link href="/forgot-password">
           <ForgotPassword>Forgot your password?</ForgotPassword>
         </Link>

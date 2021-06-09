@@ -15,7 +15,7 @@ type TextProps = {
 };
 
 export const Container = styled(Row)`
-  padding: 60px 0;
+  padding: 100px 0;
   background: ${({ src }: ContainerProps) => (src ? `url(${src})` : 'var(--tertiary)')};
 `;
 
@@ -23,9 +23,9 @@ export const Title = styled(Typography.Title)`
   max-width: 700px;
   text-transform: uppercase;
   font-size: 50px !important;
+  margin-bottom: 20px !important;
   font-weight: bold !important;
   color: var(--white) !important;
-  margin: ${({ centered }: TitleProps) => (centered ? '0 auto 5px auto' : '0 0 5px 0 !important')};
   text-align: ${({ centered }: TitleProps) => (centered ? 'center' : 'left')};
 `;
 
@@ -45,7 +45,7 @@ export const Text = styled(Typography.Paragraph)`
 
 export const Button = styled(AntButton)`
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 40px auto 0 0;
   text-transform: uppercase;
   background-color: var(--sky-blue);
   border: 0;

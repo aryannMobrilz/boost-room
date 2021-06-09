@@ -14,7 +14,6 @@ module.exports = withLess(
       backendApiHost: process.env.BACKEND_API_HOST || 'http://localhost:3000/api'
     },
     productionBrowserSourceMaps: true,
-    target: 'serverless',
     webpack: (config, options) => {
       if (!options.dev) {
         // eslint-disable-next-line no-param-reassign
