@@ -1,0 +1,7 @@
+[
+  { "key": "boosting", "label": "Boosting" },
+  { "key": "coaching", "label": "Coaching" },
+  { "key": "game-coins", "label": "Game coins" },
+  { "key": "items", "label": "Items" },
+  { "key": "accounts", "label": "Accounts" }
+]

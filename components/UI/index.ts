@@ -15,6 +15,7 @@ export { default as PopularServices } from './PopularServices/PopularServices';
 export { default as PurchasePreview } from './PurchasePreview/PurchasePreview';
 export { default as Screenshots } from './Screenshots/Screenshots';
 export { default as SelectSocialContact } from './SelectSocialContact/SelectSocialContact';
+export { default as SideMenu } from './SideMenu/SideMenu';
 export { default as StatusBar } from './StatusBar/StatusBar';
 export { default as StatusTag } from './StatusTag/StatusTag';
 export { default as Tabs } from './Tabs/Tabs';
