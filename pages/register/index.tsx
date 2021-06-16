@@ -1,16 +1,18 @@
 import { FC } from 'react';
+import authAPI from '@/api/auth';
+import type { RegisterRequest } from '@/api/auth/types';
 
-import { Form, FormInstance } from 'antd';
+import { Form } from 'antd';
 import Layout from '@/components/layout/Layout';
 import { CommonContainer } from '@/components/layout/containers';
 import { CoverImage } from '@/components/UI';
 import { Auth, RegisterForm } from '@/components/Auth';
 
 const RegisterPage: FC = () => {
-  const [form] = Form.useForm();
+  const [form] = Form.useForm<unknown>();
 
-  const onFinish = (data: unknown) => {
-    console.log('data', data);
+  const onFinish = (data: RegisterRequest) => {
+    authAPI().register(data);
   };
 
   return (
@@ -25,8 +27,8 @@ const RegisterPage: FC = () => {
           md={16}
           lg={8}
           xl={11}
-          onFinish={onFinish}
-          form={form as FormInstance<unknown>}>
+          form={form}
+          onFinish={onFinish}>
           <RegisterForm />
         </Auth>
       </CommonContainer>
