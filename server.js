@@ -23,7 +23,7 @@ app
       // eslint-disable-next-line global-require
       const { createProxyMiddleware } = require('http-proxy-middleware');
       server.use(
-        '/api',
+        '/m-api',
         createProxyMiddleware({
           target: process.env.BACKEND_API_HOST,
           changeOrigin: true

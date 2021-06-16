@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Head from 'next/head';
+import { Provider } from 'next-auth/client';
 
 import '@/styles/global.less';
 
@@ -16,7 +17,9 @@ function MyApp({
         <title>Gamer Marketplace - Leveling, Boost, Gold, Items, Accounts &ndash; BoostRoom</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Component {...pageProps} />
+      <Provider session={pageProps.session}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }
