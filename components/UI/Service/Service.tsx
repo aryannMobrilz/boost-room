@@ -51,8 +51,8 @@ const Service: FC<ServiceProps> = ({ categories, products }) => {
         <SideMenu
           title="Choose your category"
           menu={mapToObject(categories)}
-          onOpenChange={(category) => setCategory(category)}
-          onSelect={(defaultOpenKeys) => console.log('defaultOpenKeys', defaultOpenKeys)}
+          onOpenChange={(category: string) => setCategory(category)}
+          // onSelect={(defaultOpenKeys) => console.log('defaultOpenKeys', defaultOpenKeys)}
         />
       </Col>
       <Col push={1} span={18}>
