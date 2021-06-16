@@ -1075,6 +1075,11 @@ axe-core@^4.0.2:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.4.tgz#f19cd99a84ee32a318b9c5b5bb8ed373ad94f143"
   integrity sha512-Pdgfv6iP0gNx9ejRGa3zE7Xgkj/iclXqLfe7BnatdZz0QnLZ3jrRHUVH8wNSdN68w05Sk3ShGTb3ydktMTooig==
 
+axios-better-stacktrace@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/axios-better-stacktrace/-/axios-better-stacktrace-2.1.1.tgz#de2a50c59e1502bda241596b0a87fe72569cf06a"
+  integrity sha512-tn6qH9o3U6Pjes3UIilk/4ccjitUwF8g4cPleKurQ8R4xL4tVFnZ4FCe0SGhhS+l8AG7f1cS2gjqw9pBcmLXbQ==
+
 axios@^0.21.1:
   version "0.21.1"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
