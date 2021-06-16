@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useRouter } from 'next/router';
 import moment from 'moment';
 
 import Image from 'next/image';
@@ -14,6 +15,8 @@ export interface FooterProps {
 }
 
 const Footer: FC<FooterProps> = ({ children, type }) => {
+  const router = useRouter();
+
   return (
     <>
       {type == 'register' && (
@@ -35,7 +38,8 @@ const Footer: FC<FooterProps> = ({ children, type }) => {
             Continue with Google
           </SocialButton>
           <SocialButton
-            icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />}>
+            icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />}
+            onClick={() => router.push('/api/auth/signin/facebook')}>
             Continue with Facebook
           </SocialButton>
         </>
