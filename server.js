@@ -25,7 +25,7 @@ app
       server.use(
         '/api',
         createProxyMiddleware({
-          target: 'https://jsonplaceholder.typicode.com',
+          target: process.env.BACKEND_API_HOST,
           changeOrigin: true
         })
       );
