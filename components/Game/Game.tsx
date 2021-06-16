@@ -1,28 +1,39 @@
-import { useState, FC } from 'react';
+import { useState, useMemo, FC } from 'react';
 import { useRouter } from 'next/router';
 
 import { Col } from 'antd';
 import { CommonContainer } from '@/components/layout/containers';
-import { TopNavigation } from '@/components/UI';
-import { BoostingService, CoachingService } from './Tabs';
+import { TopNavigation, Service } from '@/components/UI';
 
-import { gameServicesMenu } from './schemas';
+import { gameServicesMenu, boostingServiceCategories, coachingServiceCategories } from './schemas';
 
 const Game: FC = () => {
   const router = useRouter();
 
-  const { category } = router.query;
+  const [service, setService] = useState<string>('boosting');
 
-  console.log(router.query, category);
-
-  const [currentTab, setCurrentTab] = useState<string>('profile');
+  useMemo(() => {
+    if (router.query?.service) {
+      router.push(
+        {
+          pathname: router.pathname,
+          query: {
+            ...router.query,
+            service
+          }
+        },
+        undefined,
+        { shallow: true }
+      );
+    }
+  }, [service]);
 
   const tab = (key: string) => {
     switch (key) {
       case 'boosting':
-        return <BoostingService />;
+        return <Service categories={boostingServiceCategories} />;
       case 'coaching':
-        return <CoachingService />;
+        return <Service categories={coachingServiceCategories} />;
       case 'items':
         return <div>ITEMS</div>;
       case 'game-coins':
@@ -37,8 +48,8 @@ const Game: FC = () => {
   return (
     <>
       <Col span={24}>
-        <TopNavigation items={gameServicesMenu} current={currentTab} onChange={setCurrentTab} />
-        <CommonContainer justify="start">{tab(currentTab)}</CommonContainer>
+        <TopNavigation items={gameServicesMenu} current={service} onChange={setService} />
+        <CommonContainer justify="start">{tab(service)}</CommonContainer>
       </Col>
     </>
   );

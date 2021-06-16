@@ -148,6 +148,7 @@ At vero eos et accusam et justo duo dolores et ea rebum."
     </Layout>
   );
 };
+
 //
 // export const getStaticProps: GetStaticProps = async () => {
 //   return {

@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { useState, useMemo, FC } from 'react';
 import { Menu } from 'antd';
 
 import { Title, Divider } from './SideMenu.style';
 
-type MainMenu = {
+export type MainMenu = {
   key: string;
   title: string;
   submenu: SubMenu[];
@@ -19,7 +19,12 @@ export interface SideMenuProps {
   menu: MainMenu[];
   defaultSelectedKeys?: string[];
   defaultOpenKeys?: string[];
+  openKeys?: string[];
+  selectedKeys?: string[];
+  onOpenChange?: (openKey: string) => void;
+  onSelect?: (selectKeys: Record<string, any>) => any;
   onClick?: () => any;
+  onChange?: (value: any) => any;
 }
 
 const SideMenu: FC<SideMenuProps> = ({
@@ -27,8 +32,26 @@ const SideMenu: FC<SideMenuProps> = ({
   menu,
   defaultSelectedKeys,
   defaultOpenKeys,
+  onOpenChange,
+  onSelect,
   onClick
 }) => {
+  const [openKeys, setOpenKeys] = useState<string[]>(['popular']);
+
+  useMemo(() => {
+    if (onOpenChange) {
+      onOpenChange(openKeys[0]);
+    }
+  }, [openKeys]);
+
+  const onOpenChangeHandler = (keys: Record<string, any>) => {
+    if (keys.length > 1) {
+      setOpenKeys(keys.slice(-1));
+    } else {
+      setOpenKeys(keys as string[]);
+    }
+  };
+
   return (
     <>
       <Title>{title}</Title>
@@ -37,6 +60,9 @@ const SideMenu: FC<SideMenuProps> = ({
         onClick={onClick}
         defaultSelectedKeys={defaultSelectedKeys}
         defaultOpenKeys={defaultOpenKeys}
+        openKeys={openKeys}
+        onOpenChange={onOpenChangeHandler}
+        onSelect={onSelect}
         mode="inline">
         {menu.map(({ key, title, submenu }) =>
           submenu?.length > 0 ? (
@@ -46,7 +72,7 @@ const SideMenu: FC<SideMenuProps> = ({
               ))}
             </Menu.SubMenu>
           ) : (
-            <Menu.Item key={key}>{title}</Menu.Item>
+            <Menu.SubMenu key={key} title={title} />
           )
         )}
       </Menu>
