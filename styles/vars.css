@@ -14,6 +14,8 @@
   --text-primary: #fff;
   --text-secondary: #888;
   --text-tertiary: #001334;
+  --text-quaternary: rgba(245, 245, 245, 0.6);
+
   --link-primary: #1aa2f9;
 
   --trustpilot-primary: #00b67a;

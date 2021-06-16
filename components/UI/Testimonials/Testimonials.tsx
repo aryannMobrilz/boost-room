@@ -44,7 +44,7 @@ const Testimonials: FC<TestimonialsProps> = ({ title, subtitle, testimonials }) 
                   <Card>
                     <CardTitle>{summary}</CardTitle>
                     <CardSubtitle>{user}</CardSubtitle>
-                    <Rate allowHalf defaultValue={2.5} />
+                    <Rate allowHalf defaultValue={4} />
                     <NewLine />
                     <CardText
                       ellipsis={{ rows: 8, expandable: true, symbol: <span>see more</span> }}>

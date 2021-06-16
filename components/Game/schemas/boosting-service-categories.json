@@ -1,0 +1,156 @@
+[
+  {
+    "key": "popular",
+    "title": "Popular Services"
+  },
+  {
+    "key": "power-leveling",
+    "title": "Power leveling",
+    "submenu": [
+      {
+        "key": "pve/raid",
+        "name": "PVE/Raid"
+      },
+      {
+        "key": "shadowland-raid",
+        "name": "Shadowland Raid"
+      },
+      {
+        "key": "raid",
+        "name": "Raid"
+      },
+      {
+        "key": "mythic-plus",
+        "name": "Mythic+"
+      },
+      {
+        "key": "dungeons",
+        "name": "Dungeons"
+      },
+      {
+        "key": "transmog",
+        "name": "Transmog"
+      }
+    ]
+  },
+  {
+    "key": "pve-raid",
+    "title": "PVE/Raid",
+    "submenu": [
+      {
+        "key": "7",
+        "name": "PVE"
+      },
+      {
+        "key": "8",
+        "name": "Shadowland Raid"
+      },
+      {
+        "key": "9",
+        "name": "Raid"
+      },
+      {
+        "key": "10",
+        "name": "Mythic+"
+      },
+      {
+        "key": "11",
+        "name": "Dungeons"
+      },
+      {
+        "key": "12",
+        "name": "Transmog"
+      }
+    ]
+  },
+  {
+    "key": "pvp",
+    "title": "PVP",
+    "submenu": [
+      {
+        "key": "13",
+        "name": "PVE/Raid"
+      },
+      {
+        "key": "14",
+        "name": "Shadowland Raid"
+      },
+      {
+        "key": "15",
+        "name": "Raid"
+      },
+      {
+        "key": "16",
+        "name": "Mythic+"
+      },
+      {
+        "key": "17",
+        "name": "Dungeons"
+      },
+      {
+        "key": "18",
+        "name": "Transmog"
+      }
+    ]
+  },
+  {
+    "key": "mounts",
+    "title": "Mounts",
+    "submenu": [
+      {
+        "key": "19",
+        "name": "PVE/Raid"
+      },
+      {
+        "key": "20",
+        "name": "Shadowland Raid"
+      },
+      {
+        "key": "21",
+        "name": "Raid"
+      },
+      {
+        "key": "22",
+        "name": "Mythic+"
+      },
+      {
+        "key": "23",
+        "name": "Dungeons"
+      },
+      {
+        "key": "24",
+        "name": "Transmog"
+      }
+    ]
+  },
+  {
+    "key": "gear-boost",
+    "title": "Gear boost",
+    "submenu": [
+      {
+        "key": "25",
+        "name": "PVE/Raid"
+      },
+      {
+        "key": "26",
+        "name": "Shadowland Raid"
+      },
+      {
+        "key": "27",
+        "name": "Raid"
+      },
+      {
+        "key": "28",
+        "name": "Mythic+"
+      },
+      {
+        "key": "29",
+        "name": "Dungeons"
+      },
+      {
+        "key": "30",
+        "name": "Transmog"
+      }
+    ]
+  }
+]

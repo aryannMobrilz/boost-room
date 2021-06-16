@@ -31,8 +31,8 @@ export const Carousel = styled(AntCarousel)`
     display: flex;
     align-items: center;
     border-radius: 3px;
-    height: 40px;
-    width: 100px;
+    height: 5px;
+    width: 24px;
     background-color: var(--border-primary);
   }
 
@@ -43,6 +43,7 @@ export const Carousel = styled(AntCarousel)`
 
   .slick-active button {
     background-color: var(--sky-blue) !important;
+    width: 50px;
   }
 
   .slick-dots li > button {
