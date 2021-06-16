@@ -2,22 +2,36 @@ import { FC, useState } from 'react';
 import { mapToObject } from '@/utils/helper';
 
 import { Col } from 'antd';
-import { SideMenu } from '@/components/UI';
+import { SideMenu, Products } from '@/components/UI';
 
 export interface ServiceProps {
   categories: Record<string, any>;
+  products: Record<string, any>[];
 }
 
-const Service: FC<ServiceProps> = ({ categories }) => {
+const Service: FC<ServiceProps> = ({ categories, products }) => {
   // always first category - 'popular'
   const [category, setCategory] = useState<string>('');
 
   const tab = (key: string) => {
     switch (key) {
       case 'popular':
-        return <div>Popular services</div>;
+        return (
+          <Products
+            isSearchable
+            title="Popular On Marketplace"
+            description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+            products={products}
+          />
+        );
       case 'power-leveling':
-        return <div>Power leveling</div>;
+        return (
+          <Products
+            title="Power leveling"
+            description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. "
+            products={products}
+          />
+        );
       case 'pve-raid':
         return <div>PVE / Raid</div>;
       case 'pvp':

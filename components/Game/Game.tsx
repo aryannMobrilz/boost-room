@@ -31,9 +31,9 @@ const Game: FC = () => {
   const tab = (key: string) => {
     switch (key) {
       case 'boosting':
-        return <Service categories={boostingServiceCategories} />;
+        return <Service categories={boostingServiceCategories} products={products} />;
       case 'coaching':
-        return <Service categories={coachingServiceCategories} />;
+        return <Service categories={coachingServiceCategories} products={products} />;
       case 'items':
         return <div>ITEMS</div>;
       case 'game-coins':
@@ -56,3 +56,27 @@ const Game: FC = () => {
 };
 
 export default Game;
+
+const products = [
+  {
+    title: 'Product 1',
+    description:
+      'Sed diam nonumy eirmodat vero eos et accusam et justo komodaver ed diam nonumy eirmodat',
+    price: '45.20',
+    discount: '30.20'
+  },
+  {
+    title: 'Product 2',
+    description:
+      'Sed diam nonumy eirmodat vero eos et accusam et justo komodaver ed diam nonumy eirmodat',
+    price: '45.20',
+    discount: '30.20'
+  },
+  {
+    title: 'Product 2',
+    description:
+      'Sed diam nonumy eirmodat vero eos et accusam et justo komodaver ed diam nonumy eirmodat',
+    price: '45.20',
+    discount: '30.20'
+  }
+];
