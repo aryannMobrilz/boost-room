@@ -23,9 +23,9 @@ app
       // eslint-disable-next-line global-require
       const { createProxyMiddleware } = require('http-proxy-middleware');
       server.use(
-        '/api',
+        '/m-api',
         createProxyMiddleware({
-          target: 'https://jsonplaceholder.typicode.com',
+          target: process.env.BACKEND_API_HOST,
           changeOrigin: true
         })
       );

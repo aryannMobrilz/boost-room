@@ -11,7 +11,7 @@ module.exports = withLess(
       reactStrictMode: true
     },
     publicRuntimeConfig: {
-      backendApiHost: process.env.BACKEND_API_HOST || 'http://localhost:3000/api'
+      backendApiHost: process.env.BACKEND_API_HOST
     },
     productionBrowserSourceMaps: true,
     webpack: (config, options) => {
