@@ -10,21 +10,26 @@ import Layout from '@/components/layout/Layout';
 import { CommonContainer } from '@/components/layout/containers';
 import { CoverImage } from '@/components/UI';
 import { Auth, LoginForm } from '@/components/Auth';
+import { parseErrors } from '@/utils/form';
 
 const LoginPage: FC = () => {
   const [form] = Form.useForm();
   const notification = useNotification();
 
   const onFinish = async (formData: LoginRequest) => {
-    const res: SignInResponse | undefined = await signIn('credentials', {
-      redirect: false,
-      ...formData
-    });
+    try {
+      const res: SignInResponse | undefined = await signIn('credentials', {
+        redirect: false,
+        ...formData
+      });
 
-    if (!res?.error) {
-      notification('success', 'User logged in successfully!', 'User logged in successfully!');
-    } else {
-      notification('error', 'Unable to login', res.error);
+      if (!res?.error) {
+        notification('success', 'User logged in successfully!', 'User logged in successfully!');
+      } else {
+        notification('error', 'Unable to login', res.error);
+      }
+    } catch (err) {
+      notification('error', 'Unable to login', parseErrors(err));
     }
   };
 
