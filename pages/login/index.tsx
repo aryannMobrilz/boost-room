@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { getSession, signIn, SignInResponse } from 'next-auth/client';
+import { parseErrors } from '@/utils/form';
 import { useNotification } from '@/hooks';
 
 import type { GetServerSideProps, GetServerSidePropsContext } from 'next';
@@ -16,15 +17,19 @@ const LoginPage: FC = () => {
   const notification = useNotification();
 
   const onFinish = async (formData: LoginRequest) => {
-    const res: SignInResponse | undefined = await signIn('credentials', {
-      redirect: false,
-      ...formData
-    });
+    try {
+      const res: SignInResponse | undefined = await signIn('credentials', {
+        redirect: false,
+        ...formData
+      });
 
-    if (!res?.error) {
-      notification('success', 'User logged in successfully!', 'User logged in successfully!');
-    } else {
-      notification('error', 'Unable to login', res.error);
+      if (!res?.error) {
+        notification('success', 'User logged in successfully!', 'User logged in successfully!');
+      } else {
+        notification('error', 'Unable to login', res.error);
+      }
+    } catch (err) {
+      notification('error', 'Unable to login', parseErrors(err));
     }
   };
 
