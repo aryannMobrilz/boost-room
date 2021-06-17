@@ -1,4 +1,4 @@
-import getConfig from 'next/config';
+// import getConfig from 'next/config';
 import axios, { AxiosInstance } from 'axios';
 import axiosBetterStacktrace from 'axios-better-stacktrace';
 import { NextPageContext } from 'next';
