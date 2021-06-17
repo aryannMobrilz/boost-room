@@ -23,7 +23,7 @@ const LoginPage: FC = () => {
         ...formData
       });
 
-      if (!res?.error || !res.ok) {
+      if (!res?.error) {
         notification('success', 'User logged in successfully!', 'User logged in successfully!');
       } else {
         notification('error', 'Unable to login', res.error);
