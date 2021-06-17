@@ -56,14 +56,14 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   console.log('session', session);
 
-  // if (session?.accessToken) {
-  //   return {
-  //     redirect: {
-  //       destination: '/',
-  //       permanent: false
-  //     }
-  //   };
-  // }
+  if (session?.accessToken) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    };
+  }
 
   return {
     props: {
