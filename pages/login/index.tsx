@@ -54,8 +54,6 @@ export const getServerSideProps: GetServerSideProps = async ({
 }: GetServerSidePropsContext) => {
   const session = await getSession({ req });
 
-  console.log('session', session);
-
   if (session?.accessToken) {
     return {
       redirect: {
