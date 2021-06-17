@@ -4,13 +4,14 @@ import axiosBetterStacktrace from 'axios-better-stacktrace';
 import { NextPageContext } from 'next';
 import { getSession } from 'next-auth/client';
 
-const { publicRuntimeConfig } = getConfig();
+// when target is servless turn off config
+// const { publicRuntimeConfig } = getConfig();
 
 let apiClient: AxiosInstance;
 
 function createApiClient() {
   const client = axios.create({
-    baseURL: publicRuntimeConfig.backendApiHost
+    baseURL: process.env.BACKEND_API_HOST
   });
 
   axiosBetterStacktrace(client);
