@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import authAPI from '@/api/auth';
+import { parseErrors } from '@/utils/form';
 import type { RegisterRequest } from '@/api/auth/types';
+import { useNotification } from '@/hooks';
 
 import { Form } from 'antd';
 import Layout from '@/components/layout/Layout';
@@ -10,9 +12,15 @@ import { Auth, RegisterForm } from '@/components/Auth';
 
 const RegisterPage: FC = () => {
   const [form] = Form.useForm<unknown>();
+  const notification = useNotification();
 
-  const onFinish = (data: RegisterRequest) => {
-    authAPI().register(data);
+  const onFinish = async (formData: RegisterRequest) => {
+    try {
+      const { data } = await authAPI().register(formData);
+      notification('success', 'User registered successfully!', data.success);
+    } catch (err) {
+      notification('error', 'Unable to register', parseErrors(err));
+    }
   };
 
   return (
