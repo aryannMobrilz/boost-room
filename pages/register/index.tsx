@@ -1,8 +1,10 @@
 import { FC } from 'react';
+import { STATUS_CODES } from 'http';
 import authAPI from '@/api/auth';
 import { parseErrors } from '@/utils/form';
-import type { RegisterRequest } from '@/api/auth/types';
 import { useNotification } from '@/hooks';
+
+import type { RegisterRequest } from '@/api/auth/types';
 
 import { Form } from 'antd';
 import Layout from '@/components/layout/Layout';
@@ -16,8 +18,11 @@ const RegisterPage: FC = () => {
 
   const onFinish = async (formData: RegisterRequest) => {
     try {
-      const { data } = await authAPI().register(formData);
-      notification('success', 'User registered successfully!', data.success);
+      const { statusText, data } = await authAPI().register(formData);
+
+      if (statusText == STATUS_CODES[201]) {
+        notification('success', 'User registered successfully!', data.success);
+      }
     } catch (err) {
       notification('error', 'Unable to register', parseErrors(err));
     }
