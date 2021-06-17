@@ -1,6 +1,6 @@
 import type { AxiosError } from 'axios';
 
-import { ERR_VALIDATION, ERR_INTEGRITY } from './constants';
+import { ERR_VALIDATION, ERR_INTEGRITY, ERR_INVALID_GRANT } from './constants';
 //
 // function mapBackendErrors(errorList: Record<string, any>) {
 //   console.log('errorList', errorList);
@@ -37,6 +37,10 @@ export function parseErrors(errorResponse: AxiosError): string {
     } catch (e) {
       return 'Something unexpected happened, please check network log.';
     }
+  }
+
+  if (errorResponse.response?.data.error == ERR_INVALID_GRANT) {
+    return errorResponse.response?.data.error_description;
   }
 
   if (error.message) {

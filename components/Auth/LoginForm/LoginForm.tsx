@@ -19,7 +19,7 @@ const LoginForm: FC = () => {
 
   return (
     <>
-      <FormItem name="email" label="Email address" rules={email}>
+      <FormItem name="username" label="Email address" rules={email}>
         <InputText
           placeholder="Email address"
           suffix={<Image src="/assets/icons/form/at-sign.svg" height={14} width={14} />}

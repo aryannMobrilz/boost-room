@@ -1,5 +1,6 @@
 export interface IRules {
-  email: Record<string, string | boolean>[];
+  username: Record<string, string | boolean>[];
+  email: Record<string, any>[];
   password: Record<string, string | boolean>[];
 }
 

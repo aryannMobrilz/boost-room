@@ -9,8 +9,8 @@ export type RegisterRequest = {
 
 export type LoginRequest = {
   grant_type: string;
-  client_id: string;
-  client_secret: string;
+  client_id: string | undefined;
+  client_secret: string | undefined;
   username: string;
   password: string;
 };

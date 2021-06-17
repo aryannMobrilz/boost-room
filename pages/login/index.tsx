@@ -1,9 +1,8 @@
 import { FC } from 'react';
-import { STATUS_CODES } from 'http';
-import authAPI from '@/api/auth';
-import { parseErrors } from '@/utils/form';
+import { getSession, signIn, SignInResponse } from 'next-auth/client';
 import { useNotification } from '@/hooks';
 
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import type { LoginRequest } from '@/api/auth/types';
 
 import { Form, FormInstance } from 'antd';
@@ -17,15 +16,15 @@ const LoginPage: FC = () => {
   const notification = useNotification();
 
   const onFinish = async (formData: LoginRequest) => {
-    console.log('data', formData);
-    try {
-      const { statusText } = await authAPI().login(formData);
+    const res: SignInResponse | undefined = await signIn('credentials', {
+      redirect: false,
+      ...formData
+    });
 
-      if (statusText == STATUS_CODES[200]) {
-        notification('success', 'User logged in successfully!', 'User logged in successfully!');
-      }
-    } catch (err) {
-      notification('error', 'Unable to register', parseErrors(err));
+    if (!res?.error) {
+      notification('success', 'User logged in successfully!', 'User logged in successfully!');
+    } else {
+      notification('error', 'Unable to login', res.error);
     }
   };
 
@@ -48,6 +47,29 @@ const LoginPage: FC = () => {
       </CommonContainer>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({
+  req
+}: GetServerSidePropsContext) => {
+  const session = await getSession({ req });
+
+  console.log('session', session);
+
+  // if (session?.accessToken) {
+  //   return {
+  //     redirect: {
+  //       destination: '/',
+  //       permanent: false
+  //     }
+  //   };
+  // }
+
+  return {
+    props: {
+      session
+    }
+  };
 };
 
 export default LoginPage;
