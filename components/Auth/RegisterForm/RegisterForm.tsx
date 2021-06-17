@@ -47,7 +47,7 @@ const RegisterForm: FC = () => {
       </FormItem>
       <FormItem
         last={1}
-        name="confirmPassword"
+        name="confirm_password"
         label="Confirm Password"
         rules={[
           ...confirmPassword,
@@ -62,7 +62,7 @@ const RegisterForm: FC = () => {
         ]}>
         <InputPassword placeholder="Confirm Password" />
       </FormItem>
-      <AdditionalInfo name="send_latest" valuePropName="checked">
+      <AdditionalInfo name="send_latest" valuePropName="checked" initialValue>
         <InputCheckbox>Send me the latest deals & offers</InputCheckbox>
       </AdditionalInfo>
     </>

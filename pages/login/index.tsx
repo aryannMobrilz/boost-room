@@ -1,4 +1,9 @@
 import { FC } from 'react';
+import { getSession, signIn, SignInResponse } from 'next-auth/client';
+import { useNotification } from '@/hooks';
+
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next';
+import type { LoginRequest } from '@/api/auth/types';
 
 import { Form, FormInstance } from 'antd';
 import Layout from '@/components/layout/Layout';
@@ -8,9 +13,19 @@ import { Auth, LoginForm } from '@/components/Auth';
 
 const LoginPage: FC = () => {
   const [form] = Form.useForm();
+  const notification = useNotification();
 
-  const onFinish = (data: unknown) => {
-    console.log('data', data);
+  const onFinish = async (formData: LoginRequest) => {
+    const res: SignInResponse | undefined = await signIn('credentials', {
+      redirect: false,
+      ...formData
+    });
+
+    if (!res?.error) {
+      notification('success', 'User logged in successfully!', 'User logged in successfully!');
+    } else {
+      notification('error', 'Unable to login', res.error);
+    }
   };
 
   return (
@@ -32,6 +47,27 @@ const LoginPage: FC = () => {
       </CommonContainer>
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async ({
+  req
+}: GetServerSidePropsContext) => {
+  const session = await getSession({ req });
+
+  if (session?.accessToken) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    };
+  }
+
+  return {
+    props: {
+      session
+    }
+  };
 };
 
 export default LoginPage;

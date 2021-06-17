@@ -1,13 +1,8 @@
 import { FC } from 'react';
-import { useRouter } from 'next/router';
+import { signIn } from 'next-auth/client';
 import moment from 'moment';
 
 import Image from 'next/image';
-// To Do
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// import FacebookLogin from 'react-facebook-login';
-
 import { Link, LoginButton, NewLine, Rights, Text, SocialButton } from './Footer.style';
 
 export interface FooterProps {
@@ -15,7 +10,13 @@ export interface FooterProps {
 }
 
 const Footer: FC<FooterProps> = ({ children, type }) => {
-  const router = useRouter();
+  const handleGoogleLogin = async () => {
+    await signIn('google');
+  };
+
+  const handleFacebookLogin = async () => {
+    await signIn('facebook');
+  };
 
   return (
     <>
@@ -34,23 +35,17 @@ const Footer: FC<FooterProps> = ({ children, type }) => {
 
           <NewLine plain>OR</NewLine>
           <SocialButton
-            icon={<Image src="/assets/icons/socials/google.svg" width={20} height={20} />}>
+            icon={<Image src="/assets/icons/socials/google.svg" width={20} height={20} />}
+            onClick={handleGoogleLogin}>
             Continue with Google
           </SocialButton>
           <SocialButton
             icon={<Image src="/assets/icons/socials/facebook.svg" width={20} height={20} />}
-            onClick={() => router.push('/api/auth/signin/facebook')}>
+            onClick={handleFacebookLogin}>
             Continue with Facebook
           </SocialButton>
         </>
       )}
-      {/* <FacebookLogin */}
-      {/*  appId="1088597931155576" */}
-      {/*  autoLoad */}
-      {/*  fields="name,email,picture" */}
-      {/*  onClick={() => null} */}
-      {/*  callback={(res) => console.log('res', res)} */}
-      {/* /> */}
       <Rights>&copy; {moment().year()} Boostroom. All rights reserved.</Rights>
     </>
   );

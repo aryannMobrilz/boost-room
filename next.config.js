@@ -12,11 +12,7 @@ module.exports = withLess(
     },
     target: 'serverless',
     publicRuntimeConfig: {
-      backendApiHost: process.env.BACKEND_API_HOST,
-      facebook: {
-        clientId: process.env.FACEBOOK_ID,
-        clientSecret: process.env.FACEBOOK_SECRET
-      }
+      backendApiHost: process.env.BACKEND_API_HOST
     },
     productionBrowserSourceMaps: true,
     webpack: (config, options) => {

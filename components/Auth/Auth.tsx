@@ -15,8 +15,8 @@ export interface AuthProps {
   xl?: number;
   xxl?: number;
   layout?: 'horizontal' | 'inline' | 'vertical' | undefined;
-  onFinish: ((values: unknown) => void) | undefined;
   form: FormInstance<unknown>;
+  onFinish?: (values: any) => void;
 }
 
 const Auth: FC<AuthProps> = ({
