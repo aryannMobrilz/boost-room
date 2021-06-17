@@ -1,4 +1,10 @@
 import { FC } from 'react';
+import { STATUS_CODES } from 'http';
+import authAPI from '@/api/auth';
+import { parseErrors } from '@/utils/form';
+import { useNotification } from '@/hooks';
+
+import type { LoginRequest } from '@/api/auth/types';
 
 import { Form, FormInstance } from 'antd';
 import Layout from '@/components/layout/Layout';
@@ -8,9 +14,19 @@ import { Auth, LoginForm } from '@/components/Auth';
 
 const LoginPage: FC = () => {
   const [form] = Form.useForm();
+  const notification = useNotification();
 
-  const onFinish = (data: unknown) => {
-    console.log('data', data);
+  const onFinish = async (formData: LoginRequest) => {
+    console.log('data', formData);
+    try {
+      const { statusText } = await authAPI().login(formData);
+
+      if (statusText == STATUS_CODES[200]) {
+        notification('success', 'User logged in successfully!', 'User logged in successfully!');
+      }
+    } catch (err) {
+      notification('error', 'Unable to register', parseErrors(err));
+    }
   };
 
   return (
