@@ -11,7 +11,6 @@ import Layout from '@/components/layout/Layout';
 import { CommonContainer } from '@/components/layout/containers';
 import { CoverImage } from '@/components/UI';
 import { Auth, LoginForm } from '@/components/Auth';
-import { parseErrors } from '@/utils/form';
 
 const LoginPage: FC = () => {
   const [form] = Form.useForm();
