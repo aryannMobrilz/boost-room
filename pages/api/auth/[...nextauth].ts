@@ -23,7 +23,8 @@ export default NextAuth({
 
           return data;
         } catch (err) {
-          throw new Error(parseErrors(err));
+          // throw new Error(parseErrors(err));
+          throw new Error(err);
         }
       }
     }),
