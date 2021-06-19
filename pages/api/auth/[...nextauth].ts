@@ -1,7 +1,6 @@
 import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
 import authAPI from '@/api/auth';
-import { parseErrors } from '@/utils/form';
 
 const { CLIENT_ID, CLIENT_SECRET, FACEBOOK_ID, FACEBOOK_SECRET } = process.env;
 
