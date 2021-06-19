@@ -51,5 +51,5 @@ export function parseErrors(errorResponse: AxiosError): string {
     return errorResponse.response?.data.message;
   }
 
-  return 'Something unexpected happened, please check network log.';
+  return 'Something unexpected happened, please check network log!';
 }
