@@ -15,9 +15,9 @@ const PopularGames: FC<PopularGamesProps> = ({ games }) => {
         Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. At vero eos
         et accusam et justo duo dolores et ea rebum.{' '}
       </Info>
-      <Container gutter={[40, 30]}>
+      <Container gutter={{ sm: 20, md: 30, lg: 40 }}>
         {games.map((game) => (
-          <Col key={Math.random()} span={6}>
+          <Col key={Math.random()} xs={24} sm={12} md={8} xl={6}>
             <Game>{game}</Game>
           </Col>
         ))}
