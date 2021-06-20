@@ -12,8 +12,6 @@ function useDeviceDetect(): WindowSize | null {
     height: -1
   });
 
-  console.log('window', window.innerWidth);
-
   const handleResize = () => {
     setWindowSize({
       width: window.innerWidth,
