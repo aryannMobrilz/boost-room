@@ -27,9 +27,11 @@ const PopularServices: FC<PopularServicesProps> = ({ services }) => {
         Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. At vero eos
         et accusam et justo duo dolores et ea rebum.
       </Info>
-      <Container gutter={[40, 30]}>
+      {/* gutter={[40, 30]} */}
+      {/* gutter={{ xs: 8, sm: 16, md: 80, lg: 40 }} */}
+      <Container gutter={{ sm: 10, md: 20, xl: 25 }}>
         {services.map((service) => (
-          <Col key={Math.random()} span={6}>
+          <Col key={Math.random()} xs={24} sm={12} md={8} xl={6}>
             <Service>
               <Header>
                 <Icon />
@@ -40,7 +42,7 @@ const PopularServices: FC<PopularServicesProps> = ({ services }) => {
               ))}
               <More>
                 <Span>See more</Span>
-                <Image src="/assets/icons/arrow-right.svg" width={8} height={13} />
+                <Image src="/assets/icons/arrow-right-sky-blue.svg" width={8} height={13} />
               </More>
             </Service>
           </Col>
