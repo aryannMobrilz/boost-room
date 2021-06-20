@@ -1,5 +1,6 @@
-import { FC } from 'react';
+import { useMemo, useState, FC } from 'react';
 import { range } from '@/utils/helper';
+import { useDeviceDetect } from '@/hooks';
 
 import { Row, Col, Rate } from 'antd';
 import { TrustpilotRating } from '@/components/UI';
@@ -29,7 +30,24 @@ export interface TestimonialsProps {
 }
 
 const Testimonials: FC<TestimonialsProps> = ({ title, subtitle, testimonials }) => {
-  const parsedTestimonials = range(testimonials, 4);
+  const device = useDeviceDetect();
+  const [chunkSize, setChunkSize] = useState<number>(4);
+
+  console.log('device', device?.type);
+
+  useMemo(() => {
+    if (device?.type == 'xs') {
+      setChunkSize(1);
+    } else if (device?.type == 'sm') {
+      setChunkSize(2);
+    } else if (device?.type == 'md' || device?.type == 'lg') {
+      setChunkSize(3);
+    } else {
+      setChunkSize(4);
+    }
+  }, [device?.type]);
+
+  const parsedTestimonials = range(testimonials, chunkSize);
 
   return (
     <Col span={24}>
@@ -40,7 +58,7 @@ const Testimonials: FC<TestimonialsProps> = ({ title, subtitle, testimonials }) 
           <div key={Math.random()}>
             <Row gutter={24}>
               {outer.map(({ id, summary, user, text }: Testimonial) => (
-                <Col span={6} key={id}>
+                <Col key={id} xs={24} sm={12} md={8} xl={6}>
                   <Card>
                     <CardTitle>{summary}</CardTitle>
                     <CardSubtitle>{user}</CardSubtitle>

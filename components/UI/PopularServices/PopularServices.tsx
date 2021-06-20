@@ -27,8 +27,6 @@ const PopularServices: FC<PopularServicesProps> = ({ services }) => {
         Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. At vero eos
         et accusam et justo duo dolores et ea rebum.
       </Info>
-      {/* gutter={[40, 30]} */}
-      {/* gutter={{ xs: 8, sm: 16, md: 80, lg: 40 }} */}
       <Container gutter={{ sm: 10, md: 20, xl: 25 }}>
         {services.map((service) => (
           <Col key={Math.random()} xs={24} sm={12} md={8} xl={6}>
