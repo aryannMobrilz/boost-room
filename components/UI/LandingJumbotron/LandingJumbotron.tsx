@@ -19,7 +19,7 @@ const LandingJumbotron: FC<JumbotronProps> = ({ centered, title, text, link, url
 
   return (
     <Container src={src}>
-      <Col span={24}>
+      <Col lg={20} xl={24}>
         <TextBlock>
           <Title centered={centered}>{title}</Title>
           <Text centered={centered}>{text}</Text>

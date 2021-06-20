@@ -7,12 +7,12 @@ import { Container, TextBlock, Reviews, Text, More, ReviewsButton } from './Trus
 const TrustpilotRating: FC = () => {
   return (
     <Container>
-      <Col span={12}>
+      <Col xs={24} md={12}>
         <Row gutter={[0, 12]}>
-          <Col span={24}>
+          <Col xs={{ span: 14, push: 9 }} md={{ span: 24, push: 0 }}>
             <Image src="/assets/icons/trustpilot-stars.svg" width={140} height={25} />
           </Col>
-          <TextBlock span={24}>
+          <TextBlock xs={{ span: 12, push: 6 }} md={{ span: 24, push: 0 }}>
             <Text>
               Check out our <Reviews>3131 reviews</Reviews> on
             </Text>
@@ -20,7 +20,7 @@ const TrustpilotRating: FC = () => {
           </TextBlock>
         </Row>
       </Col>
-      <More span={12}>
+      <More xs={24} md={12}>
         <ReviewsButton type="primary">Read more reviews</ReviewsButton>
       </More>
     </Container>
