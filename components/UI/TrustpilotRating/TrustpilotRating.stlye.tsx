@@ -38,11 +38,29 @@ export const More = styled(Col)`
 `;
 
 export const ReviewsButton = styled(Button)`
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   height: auto;
-  padding: 15px 60px;
+  padding: 10px 40px;
   font-weight: bold;
   background-color: var(--light-blue);
   color: var(--white);
+
+  ${mediaQuery.sm`
+    font-size: 15px;
+  `}
+
+  ${mediaQuery.md`
+    font-size: 16px;
+    padding: 12px 50px;
+  `}
+
+  ${mediaQuery.lg`
+    font-size: 17px;
+  `}
+
+  ${mediaQuery.xl`
+    font-size: 18px;
+    padding: 15px 60px;
+  `}
 `;
