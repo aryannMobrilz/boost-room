@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { Row, Col, Typography, Button } from 'antd';
 
+import { mediaQuery } from '@/utils/style';
+
 export const Container = styled(Row)`
   max-width: 680px;
   margin: 0 auto;
@@ -25,8 +27,14 @@ export const Reviews = styled(Typography.Text)`
 
 export const More = styled(Col)`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  margin-top: 40px;
+
+  ${mediaQuery.md`
+    justify-content: flex-end;
+    margin:0;
+  `}
 `;
 
 export const ReviewsButton = styled(Button)`

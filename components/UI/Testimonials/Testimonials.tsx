@@ -33,8 +33,6 @@ const Testimonials: FC<TestimonialsProps> = ({ title, subtitle, testimonials }) 
   const device = useDeviceDetect();
   const [chunkSize, setChunkSize] = useState<number>(4);
 
-  console.log('device', device?.type);
-
   useMemo(() => {
     if (device?.type == 'xs') {
       setChunkSize(1);
