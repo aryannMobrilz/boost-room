@@ -17,7 +17,7 @@ export const Collapse = styled(AntCollapse)`
     font-size: 12px;
     margin-top: -20px;
     font-weight: 500;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px !important;
     margin-bottom: 15px;
     color: var(--background-primary);
     border: none;
@@ -76,7 +76,7 @@ export const Panel = styled(AntCollapse.Panel)`
     flex-direction: row-reverse;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 5px !important;
     color: var(--sky-blue) !important;
     background-color: var(--background-quaternary);
     //box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.15);
