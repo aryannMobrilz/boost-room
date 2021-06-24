@@ -5,7 +5,7 @@ import { CommonContainer } from '@/components/layout/containers';
 import { Jumbotron, PopularGames, Testimonials } from '@/components/UI';
 import { Game } from '@/components/Game';
 
-const AboutUsPage: FC = () => {
+const ProductsPage: FC = () => {
   return (
     <Layout>
       <Jumbotron
@@ -170,4 +170,4 @@ At vero eos et accusam et justo duo dolores et ea rebum."
 // };
 //
 
-export default AboutUsPage;
+export default ProductsPage;
