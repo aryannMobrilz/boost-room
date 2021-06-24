@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-
 import { Row, Form, Input as AntInput, Button as AntButton, Typography } from 'antd';
+
+import { mediaQuery } from '@/utils/style';
 
 type ContainerProps = {
   src?: string;
@@ -16,7 +17,15 @@ type TextProps = {
 
 export const Container = styled(Row)`
   padding: 100px 0;
-  background: ${({ src }: ContainerProps) => (src ? `url(${src})` : 'var(--tertiary)')};
+  background-color: var(--tertiary);
+  background-image: ${({ src }: ContainerProps) => (src ? `url(${src})` : 'none')};
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  ${mediaQuery.xs`
+    background-position: left;
+  `}
 `;
 
 export const Title = styled(Typography.Title)`

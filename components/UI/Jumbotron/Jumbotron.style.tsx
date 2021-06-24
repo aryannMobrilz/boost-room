@@ -17,7 +17,15 @@ type TextProps = {
 
 export const Container = styled(Row)`
   padding: 40px 0;
-  background: ${({ src }: ContainerProps) => (src ? `url(${src})` : 'var(--tertiary)')};
+  background-color: var(--tertiary);
+  background-image: ${({ src }: ContainerProps) => (src ? `url(${src})` : 'none')};
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  ${mediaQuery.xs`
+    background-position: right;
+  `}
 
   ${mediaQuery.sm`
     padding: 45px 0;
