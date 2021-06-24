@@ -1,27 +1,61 @@
 import styled from '@emotion/styled';
 import { Row, Carousel as AntCarousel, Divider, Typography } from 'antd';
 
+import { mediaQuery } from '@/utils/style';
+
 export const Container = styled(Row)`
   margin-top: 80px;
   margin-bottom: 160px;
 `;
 
 export const Title = styled(Typography.Title)`
-  font-size: 40px !important;
+  font-size: 30px !important;
   margin: 0 !important;
   font-weight: bold !important;
   text-align: center;
   color: var(--text-tertiary) !important;
+
+  ${mediaQuery.sm`
+    font-size: 34px !important;
+  `}
+
+  ${mediaQuery.md`
+    font-size: 36px !important;
+  `}
+
+  ${mediaQuery.lg`
+    font-size: 38px !important;
+  `}
+
+  ${mediaQuery.xl`
+    font-size: 40px !important;
+  `}
 `;
 
 export const Info = styled(Typography.Text)`
   display: block;
   margin: 11px auto 50px auto;
   max-width: 600px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
   color: var(--text-tertiary);
+
+  ${mediaQuery.sm`
+    font-size: 15px;
+  `}
+
+  ${mediaQuery.md`
+    font-size: 16px;
+  `}
+
+  ${mediaQuery.lg`
+    font-size: 17px;
+  `}
+
+  ${mediaQuery.xl`
+    font-size: 18px;
+  `}
 `;
 
 export const Carousel = styled(AntCarousel)`
