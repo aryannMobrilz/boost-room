@@ -1,23 +1,33 @@
 import styled from '@emotion/styled';
 import { Row, Form as AntForm, Button, Typography } from 'antd';
 
+import { mediaQuery } from '@/utils/style';
+
 export const Form = styled(AntForm)`
   margin-top: 40px;
   margin-bottom: 100px;
 `;
 
 export const Title = styled(Typography.Title)`
-  font-size: 32px !important;
+  font-size: 24px !important;
   color: var(--text-tertiary) !important;
   margin: 0 0 5px 0 !important;
-`;
 
-export const Info = styled(Typography.Text)`
-  display: block;
-  font-size: 18px;
-  margin-bottom: 40px;
-  font-weight: 500;
-  color: var(--text-tertiary);
+  ${mediaQuery.sm`
+    font-size: 26px !important;
+  `}
+
+  ${mediaQuery.md`
+    font-size: 28px !important;
+  `}
+
+  ${mediaQuery.lg`
+    font-size: 30px !important;
+  `}
+
+  ${mediaQuery.xl`
+    font-size: 32px !important;
+  `}
 `;
 
 export const SubmitButton = styled(Button)`
