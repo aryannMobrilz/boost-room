@@ -107,7 +107,7 @@ export const Button = styled(AntButton)`
   text-transform: uppercase;
   background-color: var(--sky-blue);
   border: 0;
-  font-size: 18px;
+  font-size: 14px;
   height: auto;
   color: var(--white);
   padding: 10px 40px;
