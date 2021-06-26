@@ -2,9 +2,13 @@ import { FC } from 'react';
 
 import { Col } from 'antd';
 import { TextBlock, TextCollapse } from '@/components/UI';
-import { Title } from './FAQ.style';
+import { Title, Button } from './FAQ.style';
 
-const FAQ: FC = () => {
+export interface FAQProps {
+  more?: boolean;
+}
+
+const FAQ: FC<FAQProps> = ({ more }) => {
   return (
     <Col span={24}>
       <Title>Boostroom FAQ</Title>
@@ -37,6 +41,7 @@ const FAQ: FC = () => {
           }
         ]}
       />
+      {more && <Button>Show more FAQ</Button>}
     </Col>
   );
 };

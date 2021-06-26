@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import Layout from '@/components/layout/Layout';
 import { CommonContainer } from '@/components/layout/containers';
-import { Jumbotron, GamePicker, PopularGameList, InfoJumbotron } from '@/components/UI';
+import { Jumbotron, GamePicker, PopularGameList } from '@/components/UI';
 
 const AboutUsPage: FC = () => {
   return (
@@ -62,12 +62,6 @@ At vero eos et accusam et justo duo dolores et ea rebum."
           'World of Warcraft',
           'World of Warcraft'
         ]}
-      />
-      <InfoJumbotron
-        left
-        form
-        subtitle={['Subscribe', 'and get discount']}
-        src="/assets/images/jumbotron-4.png"
       />
     </Layout>
   );
