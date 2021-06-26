@@ -215,8 +215,8 @@ guarantee exceptional assistance in your gaming needs!"
         />
       </CommonContainer>
       <InfoJumbotron
-        title="Gamer marketplace"
-        subtitle={['Just for you']}
+        titles={['Gamer marketplace']}
+        subtitles={['Just for you']}
         url="/register"
         link="Register here"
         src="/assets/images/jumbotron-3.png"
@@ -224,12 +224,6 @@ guarantee exceptional assistance in your gaming needs!"
       <CommonContainer justify="center">
         <FAQ />
       </CommonContainer>
-      <InfoJumbotron
-        left
-        form
-        subtitle={['Subscribe', 'and get discount']}
-        src="/assets/images/jumbotron-3.png"
-      />
       <CommonContainer justify="center">
         <PopularGames
           games={[
