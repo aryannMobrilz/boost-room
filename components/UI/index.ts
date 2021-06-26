@@ -4,6 +4,7 @@ export { default as CoverImage } from './CoverImage/CoverImage';
 export { default as Footer } from './Footer/Footer';
 export { default as GamePicker } from './GamePicker/GamePicker';
 export { default as Header } from './Header/Header';
+export { default as InfoCard } from './InfoCard/InfoCard';
 export { default as InfoJumbotron } from './InfoJumbotron/InfoJumbotron';
 export { default as Jumbotron } from './Jumbotron/Jumbotron';
 export { default as LandingJumbotron } from './LandingJumbotron/LandingJumbotron';

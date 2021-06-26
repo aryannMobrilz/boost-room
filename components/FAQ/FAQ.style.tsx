@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Typography } from 'antd';
+import { Button as AntButton, Typography } from 'antd';
 
 import { mediaQuery } from '@/utils/style';
 
@@ -24,4 +24,18 @@ export const Title = styled(Typography.Title)`
   ${mediaQuery.xl`
     font-size: 40px !important;
   `}
+`;
+
+export const Button = styled(AntButton)`
+  display: block;
+  margin: 50px auto 0 auto;
+  height: auto;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 3px;
+  line-height: 1;
+  color: var(--sky-blue);
+  background-color: transparent;
+  border: solid 1px var(--sky-blue);
+  padding: 10px 25px;
 `;
