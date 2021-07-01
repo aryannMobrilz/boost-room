@@ -40,7 +40,7 @@ const Header: FC<HeaderProps> = ({ isAuthorized, games, user }) => {
 
   return (
     <Container>
-      {device?.type == 'sm' ? (
+      {device?.type != 'xs' ? (
         <Row>
           <Col span={3}>
             <Branding>Boostroom</Branding>
@@ -85,7 +85,9 @@ const Header: FC<HeaderProps> = ({ isAuthorized, games, user }) => {
           )}
         </Row>
       ) : (
-        <MobileMenu />
+        <MobileMenu>
+          <Branding>Boostroom</Branding>
+        </MobileMenu>
       )}
     </Container>
   );
