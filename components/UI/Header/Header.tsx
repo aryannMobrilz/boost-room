@@ -40,9 +40,13 @@ const Header: FC<HeaderProps> = ({ isAuthorized, games, user }) => {
 
   return (
     <Container>
-      {device?.type != 'xs' ? (
+      {device && device.width < 768 ? (
+        <MobileMenu>
+          <Branding>Boostroom</Branding>
+        </MobileMenu>
+      ) : (
         <Row>
-          <Col span={3}>
+          <Col xs={0} md={3}>
             <Branding>Boostroom</Branding>
           </Col>
           <Col span={8}>
@@ -84,10 +88,6 @@ const Header: FC<HeaderProps> = ({ isAuthorized, games, user }) => {
             </ButtonsBlock>
           )}
         </Row>
-      ) : (
-        <MobileMenu>
-          <Branding>Boostroom</Branding>
-        </MobileMenu>
       )}
     </Container>
   );

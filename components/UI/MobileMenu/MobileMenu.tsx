@@ -12,7 +12,7 @@ const MobileMenu: FC = ({ children }) => {
       <Container>
         {children}
         <HamburgerButton ghost onClick={() => setIsVisible(true)}>
-          <Image src="/assets/icons/hamburger-menu.svg" width={40} height={40} />
+          <Image src="/assets/icons/hamburger-menu.svg" width={30} height={30} />
         </HamburgerButton>
       </Container>
       <Drawer
@@ -20,8 +20,7 @@ const MobileMenu: FC = ({ children }) => {
         title="John Smith"
         width="90%"
         onClose={() => setIsVisible(false)}
-        visible={isVisible}
-        bodyStyle={{ paddingBottom: 80 }}>
+        visible={isVisible}>
         kkk
       </Drawer>
     </>
