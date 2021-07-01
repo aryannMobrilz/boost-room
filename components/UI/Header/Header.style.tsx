@@ -1,19 +1,29 @@
 import styled from '@emotion/styled';
 import { Layout, Row as AntRow, Col, Menu as AntMenu, Input, Button, Typography } from 'antd';
 
+import { mediaQuery } from '@/utils/style';
+
 export const Container = styled(Layout.Header)`
   padding: 18px 0;
   height: auto;
   line-height: 1;
 `;
-//
 
 export const Row = styled(AntRow)`
   display: flex;
   align-items: center;
   height: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  ${mediaQuery.md`
+    padding: 0 40px;
+  `}
+
+  ${mediaQuery.xl`
+    padding: 0 50px;
+  `}
 `;
 
 export const Branding = styled(Typography.Title)`
