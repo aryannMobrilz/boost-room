@@ -8,6 +8,7 @@ export { default as InfoCard } from './InfoCard/InfoCard';
 export { default as InfoJumbotron } from './InfoJumbotron/InfoJumbotron';
 export { default as Jumbotron } from './Jumbotron/Jumbotron';
 export { default as LandingJumbotron } from './LandingJumbotron/LandingJumbotron';
+export { default as MobileMenu } from './MobileMenu/MobileMenu';
 export { default as MoreMenu } from './MoreMenu/MoreMenu';
 export { default as PopularGameList } from './PopularGameList/PopularGameList';
 export { default as OrderSettings } from './OrderSettings/OrderSettings';
